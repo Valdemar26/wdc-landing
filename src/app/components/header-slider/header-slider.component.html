@@ -1,15 +1,21 @@
 <div class="wdc-slider-wrapper">
-  <span>welcome to</span>
-  <h1>WellDoneCode web studio</h1>
-  <h2>Web Development, Angular Team </h2>
 
-  <button class="btn">Get Started</button>
+  <div class="carousel-container">
+    <wdc-carousel [slides]="slides"></wdc-carousel>
+  </div>
+
+  <div class="wdc-slider-main">
+    <span>welcome to</span>
+    <h1>WellDoneCode web studio</h1>
+    <h2>Web Development, Angular Team </h2>
+    <button class="btn">Get Started</button>
+  </div>
 
   <a href="" class="wdc-mouse">
     <img src="./../../../assets/images/mouse.png" alt="mouse">
   </a>
 
-  <div class="wdc-slider-controls">
+  <div class="wdc-slider-controls" (click)="slider()">
     <span></span>
     <span></span>
     <span></span>
