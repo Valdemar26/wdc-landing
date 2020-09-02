@@ -7,3 +7,25 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+/* button */
+
+.btn {
+  color: #fff;
+  font-size: 14px;
+  background-color: #fa6262;
+  border-radius: 60px;
+  box-shadow: 0 5px 10px 1px rgba(250,98,98,.22);
+  display: inline-block;
+  text-align: center;
+  height: 55px;
+  line-height: 55px;
+  width: 170px;
+  border: none;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken(#fa6262, 10%);
+  }
+}
