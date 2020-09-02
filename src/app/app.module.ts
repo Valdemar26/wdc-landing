@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,8 @@ import { RecentWorksComponent } from './components/recent-works/recent-works.com
 import { OurValuesComponent } from './components/our-values/our-values.component';
 import { ClientsReviewsComponent } from './components/clients-reviews/clients-reviews.component';
 import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.component';
+import { CarouselComponent } from './components/header-slider/carousel/carousel.component';
+
 
 @NgModule({
   declarations: [
@@ -24,10 +27,12 @@ import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.comp
     RecentWorksComponent,
     OurValuesComponent,
     ClientsReviewsComponent,
-    GetInTouchComponent
+    GetInTouchComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],

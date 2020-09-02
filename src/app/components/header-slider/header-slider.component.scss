@@ -1,9 +1,34 @@
 .wdc-slider-wrapper {
   position: relative;
-  background-color: #474747;
+  background-color: rgba(0, 0, 0, 0.15);
   color: #fff;
   width: 100%;
   height: 500px;
+
+  .carousel-container {
+    display: block;
+    width: 100%;
+    height: 500px;
+  }
+
+  .wdc-slider-main {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin-bottom: 10px;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+  }
 
   .btn {
     color: #fff;
@@ -30,7 +55,7 @@
     left: 0;
     right: 0;
     bottom: 50px;
-    animation: myanimation 1.3s infinite;  // todo create 'myanimation'
+    animation: MoveUpDown 1.3s infinite;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -40,29 +65,14 @@
       width: 23px;
     }
   }
+}
 
-  .wdc-slider-controls {
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    display: flex;
-    right: 0;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
-    span {
-      content: "";
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: #ccc;
-      margin-bottom: 5px;
-
-      &.active {
-        background-color: #fff;
-      }
-    }
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
   }
 }
