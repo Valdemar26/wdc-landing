@@ -41,9 +41,11 @@ export class CarouselComponent implements OnInit {
     console.log('previous clicked, new current slide is: ', this.currentSlide);
   }
 
-  onNextClick(): void {
+  onNextClick(): void {  // todo rewrite algorithm
     const next = this.currentSlide + 1;
+    const previous = this.currentSlide - 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
+    // this.currentSlide = previous < 0 ? this.slides.length - 1 : previous;
     console.log('next clicked, new current slide is: ', this.currentSlide);
   }
 

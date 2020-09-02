@@ -1,1 +1,16 @@
-<p>our-services works!</p>
+<div class="wdc-services-wrapper">
+
+  <h2>Our Services</h2>
+  <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+
+  <div class="cards-list">
+    <div class="card" *ngFor="let card of cardsList">
+      <span>
+        <img [src]="card.imagePath" alt="card">
+      </span>
+      <h5>{{ card.title }}</h5>
+      <p>{{ card.content }}</p>
+    </div>
+  </div>
+
+</div>
