@@ -1,1 +1,20 @@
-<p>recent-works works!</p>
+<div class="wdc-recent-wrapper">
+  <h2>Recent Works</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias eaque exercitationem illo porro quas quod,
+    temporibus. Laboriosam, placeat, voluptatibus.</p>
+
+  <div class="wdc-buttons-wrapper">
+    <button class="button" (click)="makeActive(i)"
+            [ngClass]="{'active': activeButton === i}"
+            *ngFor="let button of buttons; let i = index">{{ button }}</button>
+  </div>
+
+  <div class="works-wrapper">
+    <div class="wdc-example" *ngFor="let example of examples">
+      <img [src]="example.imagePath" alt="example">
+      <p>{{ example.title }}</p>
+      <h5>{{ example.description}}</h5>
+    </div>
+  </div>
+</div>
