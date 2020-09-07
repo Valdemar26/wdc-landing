@@ -45,18 +45,32 @@
     display: flex;
 
     .wdc-example {
-      flex: 0 0 33.333333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 28%;
+      margin: 0 1%;
+      position: relative;
 
-      &:hover {
-
-        img {
-          background-color: rgba(0,0,0,.75);
-        }
-      }
+      // todo add hover animation
 
       img {
         width: 300px;
         height: 300px;
+      }
+
+      p, h5 {
+        position: absolute;
+        color: #333333;
+        top: 40%;
+        margin: 0 auto;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      h5 {
+        top: 50%;
+        font-size: 16px;
       }
     }
   }

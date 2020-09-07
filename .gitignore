@@ -48,7 +48,8 @@ Thumbs.db
 # package-lock.json
 package-lock.json
 
-# firebase
+# firebase files
+
 .firebaserc
 firebase.json
 .firebase/

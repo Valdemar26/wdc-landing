@@ -5,9 +5,10 @@
     temporibus. Laboriosam, placeat, voluptatibus.</p>
 
   <div class="wdc-buttons-wrapper">
-    <button class="button" (click)="makeActive(i)"
+    <button *ngFor="let button of buttons; let i = index"
             [ngClass]="{'active': activeButton === i}"
-            *ngFor="let button of buttons; let i = index">{{ button }}</button>
+            class="button"
+            (click)="makeActive(i)">{{ button }}</button>
   </div>
 
   <div class="works-wrapper">
