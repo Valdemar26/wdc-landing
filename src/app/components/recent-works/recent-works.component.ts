@@ -19,7 +19,6 @@ export class RecentWorksComponent implements OnInit {
 
   public makeActive(index: number): void {
     this.activeButton = index;
-    console.log(index);
   }
 
   private initButtons(): void {
