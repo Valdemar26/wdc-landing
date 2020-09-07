@@ -1,0 +1,63 @@
+.wdc-recent-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  padding: 100px 0;
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p {
+    margin: 20px auto 50px;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  .wdc-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .button {
+      border-radius: 5px;
+      box-shadow: 0 5px 10px 1px rgba(255,255,255,0.2);
+      color: #fff;
+      cursor: pointer;
+      background-color: #ccc;
+      border: 1px solid transparent;
+      outline: none;
+      padding: 10px 24px;
+      margin-right: 10px;
+
+      &.active {
+        background-color: #fa6262;
+        box-shadow: 0 5px 10px 1px rgba(250,98,98,.22);
+      }
+    }
+  }
+
+  .works-wrapper {
+    display: flex;
+
+    .wdc-example {
+      flex: 0 0 33.333333%;
+
+      &:hover {
+
+        img {
+          background-color: rgba(0,0,0,.75);
+        }
+      }
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
