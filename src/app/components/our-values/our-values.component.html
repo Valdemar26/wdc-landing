@@ -1,1 +1,16 @@
-<p>our-values works!</p>
+<div class="wdc-slide">
+  <div class="wdc-slide-content">
+    <div class="wdc-show-slide fade" *ngFor="let slide of slides;">
+      <img [src]="slide.imagePath" alt="slide">
+      <p>{{ slide.text }}</p>
+    </div>
+    <div class="wdc-carousel-index">
+      <ul>
+        <li *ngFor="let control of slides; let i = index;"
+            [class.wdc-carousel-item]="startIndex - 1 === i"
+            (click)="slide()"> <!-- todo make slide control clickable -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
