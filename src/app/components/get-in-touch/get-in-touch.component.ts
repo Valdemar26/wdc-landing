@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'wdc-get-in-touch',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetInTouchComponent implements OnInit {
 
-  constructor() { }
+  contactForm: FormGroup;
 
-  ngOnInit(): void {
+  constructor() {
+    this.contactForm = new FormGroup({
+      userName: new FormControl('', Validators.required),
+      userEmail: new FormControl('', [
+        Validators.required,
+        Validators.email
+      ]),
+      userPhone: new FormControl('', Validators.pattern('[0-9]{10}')),
+      message: new FormControl('', Validators.minLength(50))
+    });
+  }
+
+  public ngOnInit(): void {
+  }
+
+  public submit(): void {
+    console.log(this.contactForm.value);
+    this.contactForm.reset();
   }
 
 }

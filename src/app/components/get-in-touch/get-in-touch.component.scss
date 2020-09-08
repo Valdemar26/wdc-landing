@@ -1,0 +1,116 @@
+.wdc-touch {
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+
+  .wdc-details, .wdc-form {
+    flex: 0 0 50%;
+    padding-left: 20px;
+    padding-right: 20px
+  }
+
+  .wdc-details {
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #fa6262;
+    }
+
+    h3 {
+      font-size: 30px;
+      color: #333333;
+      font-weight: 100;
+    }
+
+    h4 {
+      font-size: 16px;
+      line-height: 35px;
+      color: #333333;
+      font-weight: 100;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .wdc-social {
+      display: flex;
+      flex-direction: column;
+
+      .wdc-email, .wdc-skype {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+          width: 50px;
+          height: auto;
+          padding-right: 20px;
+        }
+
+        span {
+          line-height: 35px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .wdc-form {
+
+    form {
+      .form-group {
+        width: 100%;
+        min-height: 100px;
+
+        label {
+          display: inline-block;
+          max-width: 100%;
+          margin-bottom: 5px;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          color: #333;
+        }
+
+        input, textarea {
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+          border-bottom: 1px solid #cccc;
+          display: block;
+          width: 100%;
+          height: 34px;
+          padding: 6px 12px;
+          font-size: 14px;
+          line-height: 20px;
+          color: #555;
+          outline: none;
+        }
+
+        textarea {
+          height: 50px;
+        }
+
+        .alert-danger {
+          font-size: 12px;
+          line-height: 20px;
+          color: #fa6262;
+          font-weight: 100;
+        }
+      }
+    }
+
+    button {
+      margin-top: 20px;
+      outline: none;
+
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.7;
+      }
+    }
+  }
+}

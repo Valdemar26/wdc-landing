@@ -1,1 +1,81 @@
-<p>get-in-touch works!</p>
+<div class="wdc-touch">
+
+  <div class="wdc-details">
+    <h2>Lets Get In Touch</h2>
+    <h3>Contact With Us</h3>
+    <h4>West is not just about graphic design; it's more than that. We offer integral communication services,
+      and we're responsible for our process and results.</h4>
+
+    <span>Our Contact Details:</span>
+
+    <div class="wdc-social">
+
+      <div class="wdc-email">
+        <img src="./../../../assets/images/mail.svg" alt="email">
+        <span>info@example.com</span>
+      </div>
+
+      <div class="wdc-skype">
+        <img src="./../../../assets/images/skype.svg" alt="skype">
+        <span>skypeusernamehere</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wdc-form">
+
+    <form [formGroup]="contactForm" novalidate>
+
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" name="name" formControlName="userName" />
+
+        <div class="alert alert-danger"
+             *ngIf="contactForm.controls['userName'].invalid && contactForm.controls['userName'].touched">
+          Please input name
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" name="email" formControlName="userEmail" />
+
+        <div class="alert alert-danger"
+             *ngIf="contactForm.controls['userEmail'].invalid && contactForm.controls['userEmail'].touched">
+          Please input correct email
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Contact phone</label>
+        <input class="form-control" name="phone" formControlName="userPhone" />
+        <div class="alert alert-danger"
+             *ngIf="contactForm.controls['userPhone'].invalid && contactForm.controls['userPhone'].touched">
+          Please input correct phone
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea formControlName="message"></textarea>
+
+        <div class="alert alert-danger"
+             *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched">
+          Please input message (min 50 symbols)
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn"
+                [class.disabled]="contactForm.invalid"
+                [disabled]="contactForm.invalid"
+                (click)="submit()">
+          SUBMIT REQUEST
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
