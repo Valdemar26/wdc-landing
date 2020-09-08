@@ -63,4 +63,32 @@ export class OurValuesComponent implements OnInit {
     }, 3000);
   }
 
+  public move(index): void {
+    console.log(index);
+    let i;
+    const slides = Array.from(document.getElementsByClassName('wdc-show-slide'));
+    const dots = document.getElementsByClassName('dot');
+
+    if (index > slides.length) {
+      this.startIndex = 1;
+    }
+
+    if (index < 1) {
+      this.startIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+      const slide = slides[this.startIndex] as HTMLElement;
+      console.log('slide: ' , slide);
+      slide[i].style.display = 'none';
+    }
+
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(' active', '');
+    }
+
+    const slidee = slides[this.startIndex] as HTMLElement;
+    slidee[this.startIndex - 1].style.display = 'block';
+    dots[this.startIndex - 1].className += ' active';
+  }
 }
