@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { LandingService } from '../../services/landing.service';
@@ -11,6 +11,16 @@ import { LandingService } from '../../services/landing.service';
 export class GetInTouchComponent implements OnInit {
 
   contactForm: FormGroup;
+  isVisible: boolean;
+  scrolled: number;
+  pageHeight: number;
+
+  @HostListener('window:scroll', ['$event'])
+  checkScrolled(event): void {
+    this.scrolled = window.pageYOffset;
+
+    this.isVisible = this.scrolled > this.pageHeight / 2;
+  }
 
   constructor(private landingService: LandingService) {
     this.contactForm = new FormGroup({
@@ -26,6 +36,12 @@ export class GetInTouchComponent implements OnInit {
 
   // todo add dynamic-component notification if form successfully send
   public ngOnInit(): void {
+    this.getPageHeight();
+  }
+
+  private getPageHeight(): void {
+    const body = document.querySelector('body');
+    this.pageHeight = body.getBoundingClientRect().height;
   }
 
   public submit(): void {
