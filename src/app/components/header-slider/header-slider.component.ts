@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LandingService } from '../../services/landing.service';
+
 @Component({
   selector: 'wdc-header-slider',
   templateUrl: './header-slider.component.html',
@@ -9,7 +11,7 @@ export class HeaderSliderComponent implements OnInit {
 
   public slides = [];
 
-  constructor() { }
+  constructor(private landingService: LandingService) { }
 
   ngOnInit(): void {
     this.slides = [
@@ -21,5 +23,9 @@ export class HeaderSliderComponent implements OnInit {
 
   slider(): void {
 
+  }
+
+  public scrollToElement(target): void {
+    this.landingService.smoothScroll(target);
   }
 }

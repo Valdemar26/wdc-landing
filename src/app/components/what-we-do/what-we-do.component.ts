@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LandingService } from '../../services/landing.service';
+
 @Component({
   selector: 'wdc-what-we-do',
   templateUrl: './what-we-do.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhatWeDoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private landingService: LandingService) { }
 
   ngOnInit(): void {
   }
 
+  public scrollToElement(target: string): void {
+    this.landingService.smoothScroll(target);
+  }
 }

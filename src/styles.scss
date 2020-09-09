@@ -10,7 +10,7 @@ body {
 
 /* button */
 
-.btn {
+.btn {  // todo add 'click' raised effect as in material button
   color: #fff;
   font-size: 14px;
   background-color: #fa6262;
@@ -23,6 +23,7 @@ body {
   width: 170px;
   border: none;
   transition: background-color 0.3s ease-in;
+  outline: none;
 
   &:hover {
     cursor: pointer;

@@ -2,7 +2,9 @@
   <img src="./../../../assets/images/logo.png" class="wdc-logo" alt="logo">
 
   <ul class="wdc-list">
-    <li class="wdc-list-item" *ngFor="let menu of menuList">{{ menu }}</li>
+    <li class="wdc-list-item"
+        *ngFor="let menu of menuList"
+        (click)="scroll(menu)">{{ menu }}</li>
   </ul>
 
 </div>
