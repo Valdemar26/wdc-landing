@@ -11,4 +11,11 @@ export class LandingService {
     const elementToScroll = document.getElementById(target);
     elementToScroll.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
   }
+
+  public smoothScrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }
