@@ -44,7 +44,7 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
     this.initContactForm();
   }
 
-  // todo add dynamic-component notification if form successfully send
+
   public ngOnInit(): void {
     this.getPageHeight();
   }

@@ -1,10 +1,11 @@
-<div class="wdc-wrapper">
+<div class="wdc-wrapper" id="home"> <!-- todo maybe make menu-navbar fixed? -->
   <img src="./../../../assets/images/logo.png" class="wdc-logo" alt="logo">
 
   <ul class="wdc-list">
     <li class="wdc-list-item"
-        *ngFor="let menu of menuList"
-        (click)="scroll(menu)">{{ menu }}</li>
+        *ngFor="let menu of menuList; let i = index;"
+        [class.active]="activeMenuItem === i"
+        (click)="scrollToSection(menu, i)">{{ menu }}</li>
   </ul>
 
 </div>
