@@ -15,6 +15,7 @@ import { OurValuesComponent } from './components/our-values/our-values.component
 import { ClientsReviewsComponent } from './components/clients-reviews/clients-reviews.component';
 import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.component';
 import { CarouselComponent } from './components/header-slider/carousel/carousel.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CarouselComponent } from './components/header-slider/carousel/carousel.
     OurValuesComponent,
     ClientsReviewsComponent,
     GetInTouchComponent,
-    CarouselComponent
+    CarouselComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
