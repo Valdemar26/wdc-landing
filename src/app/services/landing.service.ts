@@ -18,4 +18,9 @@ export class LandingService {
       behavior: 'smooth'
     });
   }
+
+  public closeNotification(): void {
+    // todo create logic to 'close notification' from everywhere
+    console.log('close notification');
+  }
 }
