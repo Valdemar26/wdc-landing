@@ -78,7 +78,8 @@
 
   </div>
 
-  <a class="wdc-go-to-top" (click)="scrollToTop()">
+  <a *ngIf="isVisible"
+     class="wdc-go-to-top" (click)="scrollToTop()" >
     <img src="../../../assets/images/arrow-top.svg" alt="arrow-top">
   </a>
 
