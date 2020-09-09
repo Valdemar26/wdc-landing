@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { LandingService } from '../../services/landing.service';
+
 @Component({
   selector: 'wdc-get-in-touch',
   templateUrl: './get-in-touch.component.html',
@@ -10,7 +12,7 @@ export class GetInTouchComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor() {
+  constructor(private landingService: LandingService) {
     this.contactForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl('', [
@@ -22,7 +24,7 @@ export class GetInTouchComponent implements OnInit {
     });
   }
 
-  // todo add dynamic notification if form successfully send
+  // todo add dynamic-component notification if form successfully send
   public ngOnInit(): void {
   }
 
@@ -31,4 +33,8 @@ export class GetInTouchComponent implements OnInit {
     this.contactForm.reset();
   }
 
-}
+  public scrollToTop(): void {
+    this.landingService.smoothScrollToTop();
+  }
+
+  }
