@@ -1,12 +1,10 @@
 .wdc-do-wrapper {
   display: flex;
 
-
-  .wdc-left, .wdc-right {
-    flex: 0 0 50%;
-  }
-
   .wdc-left {
+    flex: 0 0 45%;
+    padding-right: 20px;
+
     img {
       width: 720px;
       height: 560px;
@@ -15,7 +13,7 @@
   }
 
   .wdc-right {
-    padding-left: 20px;
+    flex: 0 0 40%;
 
     h2 {
       font-weight: bold;

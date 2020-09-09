@@ -22,6 +22,7 @@ export class GetInTouchComponent implements OnInit {
     });
   }
 
+  // todo add dynamic notification if form successfully send
   public ngOnInit(): void {
   }
 

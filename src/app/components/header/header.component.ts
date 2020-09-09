@@ -11,8 +11,12 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  // todo add smooth scroll
   ngOnInit(): void {
-    this.menuList = ['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact Us'];
+    this.menuList = ['Home', 'About', 'Services', 'Strategy', 'Portfolio', 'Reviews', 'Contact Us'];
   }
 
+  public scroll(item): void {
+    console.log(item.toLowerCase());
+  }
 }
