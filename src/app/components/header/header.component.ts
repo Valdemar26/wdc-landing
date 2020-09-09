@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LandingService } from '../../services/landing.service';
+
 @Component({
   selector: 'wdc-header',
   templateUrl: './header.component.html',
@@ -8,15 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   menuList;
+  activeMenuItem: number;
 
-  constructor() { }
+  constructor(private landingService: LandingService) { }
 
-  // todo add smooth scroll
   ngOnInit(): void {
     this.menuList = ['Home', 'About', 'Services', 'Strategy', 'Portfolio', 'Reviews', 'Contact Us'];
   }
 
-  public scroll(item): void {
-    console.log(item.toLowerCase());
+  public scrollToSection(item, index): string {
+    this.activeMenuItem = index;
+
+    if (item === 'Contact Us') {
+      this.landingService.smoothScroll('touch');
+      return;
+    }
+
+    this.landingService.smoothScroll(item.toLowerCase());
   }
 }
