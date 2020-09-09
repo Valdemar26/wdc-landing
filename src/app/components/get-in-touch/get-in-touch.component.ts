@@ -13,6 +13,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { LandingService } from '../../services/landing.service';
 import { NotificationComponent } from '../notification/notification.component';
+import { NotificationConfigInterface } from '../../interfaces/notification-config.interface';
 
 @Component({
   selector: 'wdc-get-in-touch',
@@ -52,17 +53,17 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
     console.log(this.contactForm.value);
     this.contactForm.reset();
 
-    const config = {
-      label: 'Notification',
+    const config: NotificationConfigInterface = {
+      label: 'Message send successfully!',
       color: 'green',
-      timeout: 2000
+      timeout: 4000
     };
 
     this.createDynamicNotification(config);
 
     setTimeout(() => {
       this.destroyNotification();
-    }, 5000);
+    }, config.timeout);
   }
 
   public scrollToTop(): void {

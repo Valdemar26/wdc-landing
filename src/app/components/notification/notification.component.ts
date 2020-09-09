@@ -1,5 +1,8 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
+import { NotificationConfigInterface } from '../../interfaces/notification-config.interface';
+import { LandingService } from '../../services/landing.service';
+
 @Component({
   selector: 'wdc-notification',
   templateUrl: './notification.component.html',
@@ -7,13 +10,16 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class NotificationComponent implements OnInit {
 
-  @Input() config;
+  @Input() config: NotificationConfigInterface;
   @Output() output = new EventEmitter();
 
-  constructor() { }
+  constructor(private landingService: LandingService) { }
 
   public ngOnInit(): void {
     console.log('config: ', this.config);
   }
 
+  public closeNotification(): void {
+    this.landingService.closeNotification();
+  }
 }
