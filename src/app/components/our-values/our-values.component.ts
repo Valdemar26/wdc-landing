@@ -79,7 +79,7 @@ export class OurValuesComponent implements OnInit {
 
     for (i = 0; i < slides.length; i++) {
       const slide = slides[this.startIndex] as HTMLElement;
-      console.log('slide: ' , slide);
+      // console.log('slide: ' , slide);
       slide[i].style.display = 'none';
     }
 
