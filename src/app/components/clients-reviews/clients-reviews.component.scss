@@ -1,0 +1,27 @@
+.wdc-reviews {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  width: 100%;
+  min-height: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 20px auto 40px;
+  }
+
+  span.divider {
+    height: 70px;
+    border-left: 4px dashed #fa6262;
+    margin: 0 auto;
+  }
+}
