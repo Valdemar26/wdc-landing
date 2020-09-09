@@ -3,6 +3,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
+  position: relative;
 
   .wdc-details, .wdc-form {
     flex: 0 0 48%;
@@ -139,5 +140,10 @@
       width: 12px;
       height: 12px;
     }
+  }
+
+  .notification-wrapper {
+    position: absolute;
+    width: 100%;
   }
 }
