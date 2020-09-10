@@ -14,11 +14,11 @@ export class OurServicesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.initCardsList();
   }
 
-  initCardsList(): void {
+  private initCardsList(): void {
     this.cardsList = [
       {
         title: 'Web Design',

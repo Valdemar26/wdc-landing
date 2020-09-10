@@ -92,7 +92,8 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
       ]),
       userPhone: new FormControl('', Validators.pattern('[0-9]{10}')),
       message: new FormControl('', Validators.minLength(50))
-    });
+    },
+{updateOn: 'blur'});
   }
 
   private createDynamicNotification(config?): void {

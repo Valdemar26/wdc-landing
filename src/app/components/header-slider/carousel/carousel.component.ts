@@ -1,11 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { transition, trigger, useAnimation } from '@angular/animations';
 
-import {
-  fadeIn,
-  fadeOut,
-} from './carousel.animations';
+import { fadeIn, fadeOut } from './carousel.animations';
 
-import {transition, trigger, useAnimation} from '@angular/animations';
 
 @Component({
   selector: 'wdc-carousel',
@@ -25,11 +22,11 @@ export class CarouselComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.preloadImages();
   }
 
-  preloadImages(): void {
+  private preloadImages(): void {
     for (const slide of this.slides) {
       new Image().src = slide.src;
     }
