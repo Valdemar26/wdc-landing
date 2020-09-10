@@ -13,11 +13,11 @@ export class StrategyComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.initStrategyList();
   }
 
-  initStrategyList(): void {
+  private initStrategyList(): void {
     // todo rewrite to *ngFor and use strategyList data-object
     this.strategyList = [
       {

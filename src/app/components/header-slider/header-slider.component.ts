@@ -13,12 +13,8 @@ export class HeaderSliderComponent implements OnInit {
 
   constructor(private landingService: LandingService) { }
 
-  ngOnInit(): void {
-    this.slides = [
-      { src: './../../../assets/images/slider1.jpg' },
-      { src: './../../../assets/images/slider2.png' },
-      { src: './../../../assets/images/slider3.jpg' }
-    ];
+  public ngOnInit(): void {
+    this.initSlides();
   }
 
   slider(): void {
@@ -27,5 +23,13 @@ export class HeaderSliderComponent implements OnInit {
 
   public scrollToElement(target): void {
     this.landingService.smoothScroll(target);
+  }
+
+  private initSlides(): void {
+    this.slides = [
+      { src: './../../../assets/images/slider1.jpg' },
+      { src: './../../../assets/images/slider2.png' },
+      { src: './../../../assets/images/slider3.jpg' }
+    ];
   }
 }

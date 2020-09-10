@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private landingService: LandingService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.menuList = ['Home', 'About', 'Services', 'Strategy', 'Portfolio', 'Reviews', 'Contact Us'];
   }
 

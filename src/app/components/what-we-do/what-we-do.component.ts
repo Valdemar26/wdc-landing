@@ -11,7 +11,7 @@ export class WhatWeDoComponent implements OnInit {
 
   constructor(private landingService: LandingService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
   public scrollToElement(target: string): void {
