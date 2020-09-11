@@ -16,6 +16,7 @@ import { ClientsReviewsComponent } from './components/clients-reviews/clients-re
 import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.component';
 import { CarouselComponent } from './components/header-slider/carousel/carousel.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { DeferLoadDirective } from './directives/defer-load.directive';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { NotificationComponent } from './components/notification/notification.co
     ClientsReviewsComponent,
     GetInTouchComponent,
     CarouselComponent,
-    NotificationComponent
+    NotificationComponent,
+    DeferLoadDirective
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { NotificationComponent } from './components/notification/notification.co
     FormsModule,
     ReactiveFormsModule
   ],
+  exports: [DeferLoadDirective],
   providers: [],
   bootstrap: [AppComponent]
 })

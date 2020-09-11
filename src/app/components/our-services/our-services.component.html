@@ -1,9 +1,9 @@
+<!--<div (deferLoad)="showMyElement=true" class="wdc-services-wrapper" id="services">-->
 <div class="wdc-services-wrapper" id="services">
-
   <h2>Our Services</h2>
   <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
 
-  <div class="cards-list">
+  <div class="cards-list"> <!-- *ngIf=showMyElement -->
     <div class="card" *ngFor="let card of cardsList">
       <span>
         <img [src]="card.imagePath" alt="card">
