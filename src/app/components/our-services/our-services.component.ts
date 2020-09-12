@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CardsListInterface } from '../../interfaces/cards-list.interface';
+import { DeferLoadDirective } from '../../directives/defer-load.directive';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { CardsListInterface } from '../../interfaces/cards-list.interface';
 export class OurServicesComponent implements OnInit {
 
   cardsList: CardsListInterface[];
+  showMyElement: boolean;
 
   constructor() { }
 
