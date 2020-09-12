@@ -38,6 +38,7 @@
         display: flex;
         flex: 0 0 33.333333%;
         position: relative;
+        cursor: pointer;
 
         img {
           height: 176px;
@@ -46,6 +47,7 @@
           border-radius: 100%;
           margin: 0 auto;
           position: relative;
+          transition: 0.3s ease-in;
 
           &.arrow {
             width: 34px;
@@ -65,12 +67,17 @@
           left: 50%;
           top: 200px;
         }
+
+        &:hover {
+          img.image-step {
+            border: 5px solid #fff;
+            transform: rotate(45deg);
+          }
+        }
       }
 
       .text {
         flex: 0 0 33.333333%;
-        padding-right: 15px;
-        padding-left: 15px;
 
         p {
           font-size: 17px;

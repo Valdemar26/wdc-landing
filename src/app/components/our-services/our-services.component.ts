@@ -23,7 +23,7 @@ export class OurServicesComponent implements OnInit {
   private initCardsList(): void {
     this.cardsList = [
       {
-        title: 'Web Design',
+        title: 'Landing Pages',
         imagePath: './../../../assets/images/1.png',
         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error harum iusto obcaecati odit officiis' +
         ' repellat rerum tenetur ut veniam.'
@@ -35,7 +35,7 @@ export class OurServicesComponent implements OnInit {
         ' repellat rerum tenetur ut veniam.'
       },
       {
-        title: 'Android App',
+        title: 'Existing Code refactor',
         imagePath: './../../../assets/images/3.png',
         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error harum iusto obcaecati odit officiis' +
         ' repellat rerum tenetur ut veniam.'

@@ -29,16 +29,19 @@
       line-height: 35px;
       color: #333333;
       font-weight: 100;
+      margin-bottom: 20px;
     }
 
-    span {
+    span.detail {
       font-weight: bold;
       font-size: 20px;
+      color: #333;
     }
 
     .wdc-social {
       display: flex;
       flex-direction: column;
+      margin-top: 20px;
 
       .wdc-email, .wdc-skype {
         display: flex;
@@ -46,7 +49,7 @@
         margin-bottom: 20px;
 
         img {
-          width: 50px;
+          width: 40px;
           height: auto;
           padding-right: 20px;
         }
