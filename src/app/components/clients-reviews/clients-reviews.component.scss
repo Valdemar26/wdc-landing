@@ -1,7 +1,9 @@
+@import './../../../assets/styles/variables';
+
 .wdc-reviews {
   display: flex;
   flex-direction: column;
-  background-color: #ebebeb;
+  background-color: $white-light;
   width: 100%;
   min-height: 300px;
   padding-top: 50px;
@@ -21,7 +23,7 @@
 
   span.divider {
     height: 70px;
-    border-left: 4px dashed #fa6262;
+    border-left: 4px dashed $red;
     margin: 0 auto;
   }
 }

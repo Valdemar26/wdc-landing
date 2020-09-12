@@ -1,7 +1,9 @@
+@import './../../../assets/styles/variables';
+
 .wdc-recent-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: #ebebeb;
+  background-color: $white-light;
   padding: 100px 0;
 
   h2 {
@@ -25,18 +27,18 @@
 
     .button {
       border-radius: 5px;
-      box-shadow: 0 5px 10px 1px rgba(255,255,255,0.2);
-      color: #fff;
+      box-shadow: $box-shadow-light;
+      color: $white;
       cursor: pointer;
-      background-color: #ccc;
+      background-color: $gray;
       border: 1px solid transparent;
       outline: none;
       padding: 10px 24px;
       margin-right: 10px;
 
       &.active {
-        background-color: #fa6262;
-        box-shadow: 0 5px 10px 1px rgba(250,98,98,.22);
+        background-color: $red;
+        box-shadow: $box-shadow-red;
       }
     }
   }
@@ -61,7 +63,7 @@
 
       p, h5 {
         position: absolute;
-        color: #333333;
+        color: $dark;
         top: 40%;
         margin: 0 auto;
         font-size: 24px;
