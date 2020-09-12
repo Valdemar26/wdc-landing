@@ -1,10 +1,12 @@
+@import './../../../assets/styles/variables';
+
 .wdc-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100px;
-  background-color: rgba(14,17,23,.9);
+  background-color: $dark-background;
 
 
   .wdc-logo {
@@ -15,7 +17,7 @@
   }
 
   .wdc-list {
-    color: #fff;
+    color: $white;
     list-style-type: none;
     display: flex;
 
@@ -25,11 +27,11 @@
       transition: color 0.3s ease-in;
 
       &.active {
-        color: #fa6262;
+        color: $red;
       }
 
       &:hover {
-        color: darken(#fff, 20%);
+        color: darken($white, 20%);
       }
     }
   }

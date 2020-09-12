@@ -1,3 +1,5 @@
+@import './../../../assets/styles/variables';
+
 .wdc-do-wrapper {
   display: flex;
 
@@ -19,7 +21,7 @@
       font-weight: bold;
       font-size: 30px;
       line-height: 36px;
-      color: #333333;
+      color: $dark;
       margin: 20px 0;
     }
 
@@ -27,7 +29,7 @@
       font-weight: 100;
       font-size: 30px;
       line-height: 30px;
-      color: #333333;
+      color: $dark;
       margin: 20px 0;
     }
 
