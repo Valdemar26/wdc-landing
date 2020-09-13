@@ -14,6 +14,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LandingService } from '../../services/landing.service';
 import { NotificationComponent } from '../notification/notification.component';
 import { NotificationConfigInterface } from '../../interfaces/notification-config.interface';
+import {NotificationService} from '../../services/notification.service';
 
 @Component({
   selector: 'wdc-get-in-touch',
@@ -39,7 +40,8 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
 
   constructor(
     private landingService: LandingService,
-    private resolver: ComponentFactoryResolver
+    private resolver: ComponentFactoryResolver,
+    private notificationService: NotificationService
   ) {
     this.initContactForm();
   }
@@ -59,7 +61,14 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
       timeout: 4000
     };
 
+    const customConfig: NotificationConfigInterface = {
+      label: 'Custom Notification',
+      color: 'red',
+      timeout: 4000
+    };
+
     this.createDynamicNotification(config);
+    this.notificationService.open(customConfig);
 
     setTimeout(() => {
       this.destroyNotification();
