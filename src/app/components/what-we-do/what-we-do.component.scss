@@ -44,3 +44,34 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .wdc-do-wrapper {
+    flex-direction: column;
+
+    .wdc-left, .wdc-right {
+      flex: none;
+      padding: 20px;
+      width: calc(100% - 40px);
+    }
+
+    .wdc-left {
+      text-align: center;
+
+      img {
+        width: calc(100% - 40px);
+        height: auto;
+        margin-top: 0;
+        object-fit: cover;
+      }
+    }
+
+    .wdc-right {
+      text-align: center;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+}

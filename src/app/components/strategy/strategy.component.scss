@@ -135,3 +135,31 @@
 
   }
 }
+
+
+@media (max-width: 1024px) {
+  .wdc-strategy-wrapper {
+    .container {
+      padding: 20px 0;
+
+      .step-1, .step-2, .step-3, .step-4 {
+        flex-direction: column;
+        margin-bottom: 50px;
+
+        .text {
+          p {
+            text-align: center;
+          }
+        }
+
+        .divider {
+          display: none;
+        }
+      }
+
+      .step-2, .step-4 {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

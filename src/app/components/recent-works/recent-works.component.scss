@@ -77,3 +77,16 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .wdc-recent-wrapper {
+    padding: 20px 0;
+    .works-wrapper {
+      flex-direction: column;
+
+      .wdc-example {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

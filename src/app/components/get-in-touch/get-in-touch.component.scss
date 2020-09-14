@@ -90,7 +90,7 @@
           box-shadow: none;
           border-bottom: 1px solid $gray;
           display: block;
-          width: 100%;
+          width: calc(100% - 24px);
           height: 34px;
           padding: 6px 12px;
           font-size: 14px;
@@ -150,5 +150,38 @@
   .notification-wrapper {
     position: absolute;
     width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wdc-touch {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+
+    .wdc-go-to-top {
+      right: 0;
+      left: 20px;
+      bottom: 20px;
+    }
+
+    .wdc-details, .wdc-form {
+      padding-left: 20px;
+      padding-right: 0;
+      width: calc(100% - 20px);
+    }
+
+    .wdc-form {
+      margin: 0 auto;
+    }
+
+    .wdc-details {
+      margin-bottom: 30px;
+
+      .wdc-social {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
   }
 }
