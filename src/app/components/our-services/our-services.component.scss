@@ -71,3 +71,17 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .wdc-services-wrapper {
+    padding: 20px 0;
+
+    .cards-list {
+      .card {
+        width: 80%;
+        margin: 0 auto 20px;
+        flex: none;
+      }
+    }
+  }
+}
