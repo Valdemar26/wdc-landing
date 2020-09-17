@@ -172,7 +172,10 @@
     }
 
     .wdc-form {
-      margin: 0 auto;
+
+      .form-group {
+        margin: 0 auto;
+      }
     }
 
     .wdc-details {
