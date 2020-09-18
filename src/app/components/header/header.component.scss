@@ -68,3 +68,14 @@
   40% { transform: translate(1px, -1px) rotate(1deg); }
   50% { transform: translate(-1px, 2px) rotate(-1deg); }
 }
+
+/* navigation */
+.navigation {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    //display: block;
+  }
+}
