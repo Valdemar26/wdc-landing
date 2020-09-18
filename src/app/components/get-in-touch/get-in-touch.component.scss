@@ -159,12 +159,6 @@
     text-align: center;
     padding: 20px 0;
 
-    .wdc-go-to-top {
-      right: 0;
-      left: 20px;
-      bottom: 20px;
-    }
-
     .wdc-details, .wdc-form {
       padding-left: 20px;
       padding-right: 0;
@@ -191,7 +185,13 @@
 
 @media (max-width: 768px) {
   .wdc-touch {
-    .wdc-details {
+    .wdc-details, .wdc-form {
+      padding-left: 0;
+
+      form {
+        padding-left: 10px;
+      }
+
       .wdc-social {
         flex-direction: column;
         align-items: center;
