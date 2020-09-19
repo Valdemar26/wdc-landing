@@ -49,6 +49,14 @@
   }
 }
 
+
+
+@keyframes pulsing {
+  to {
+    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+  }
+}
+
 @media (max-width: 1024px) {
   .wdc-wrapper {
     .wdc-list {
