@@ -17,7 +17,7 @@ import { NotificationConfigInterface } from '../../interfaces/notification-confi
 import {NotificationService} from '../../services/notification.service';
 
 @Component({
-  selector: 'wdc-get-in-touch',
+  selector: 'itp-get-in-touch',
   templateUrl: './get-in-touch.component.html',
   styleUrls: ['./get-in-touch.component.scss']
 })

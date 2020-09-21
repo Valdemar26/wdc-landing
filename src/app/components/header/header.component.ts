@@ -16,7 +16,7 @@ enum Direction {
 }
 
 @Component({
-  selector: 'wdc-header',
+  selector: 'itp-header',
   templateUrl: './header.component.html',
   animations: [
     trigger('toggle', [

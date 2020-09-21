@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { LandingService } from '../../services/landing.service';
 
 @Component({
-  selector: 'wdc-header-slider',
+  selector: 'itp-header-slider',
   templateUrl: './header-slider.component.html',
   styleUrls: ['./header-slider.component.scss']
 })
