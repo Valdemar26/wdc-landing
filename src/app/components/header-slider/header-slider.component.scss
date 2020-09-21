@@ -15,15 +15,16 @@
 
   .wdc-slider-main {
     position: absolute;
-    top: 20%;
-    left: 0;
+    top: 50%;
+    left: 10%;
     right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     span {
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
