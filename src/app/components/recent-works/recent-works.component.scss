@@ -54,11 +54,14 @@
       margin: 0 1%;
       position: relative;
 
-      // todo add hover animation
-
       img {
         width: 300px;
         height: 300px;
+
+        &:hover {
+          opacity: 0.7;
+          cursor: pointer;
+        }
       }
 
       p, h5 {

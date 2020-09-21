@@ -11,24 +11,20 @@
     text-align: center;
     color: $white;
     padding: 100px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .step-1, .step-2, .step-3, .step-4 {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 150px;
+      min-width: 230px;
 
       .counter {
         flex: 0 0 33.333333%;
 
-        b {
-          display: inline-block;
-          margin-right: 20px;
-          color: $pink;
-          font-weight: bold;
-          font-size: 100px;
-        }
         span {
           display: inline-block;
           font-weight: 100;
@@ -41,6 +37,8 @@
         flex: 0 0 33.333333%;
         position: relative;
         cursor: pointer;
+        z-index: 1;
+        margin-bottom: 20px;
 
         img {
           height: 176px;
@@ -50,6 +48,7 @@
           margin: 0 auto;
           position: relative;
           transition: 0.3s ease-in;
+          z-index: 1;
 
           &.arrow {
             width: 34px;
@@ -63,11 +62,11 @@
 
         .divider {
           position: absolute;
-          border-left: 4px dashed $pink;
-          height: 70px;
-          margin-top: 25px;
-          left: 50%;
-          top: 200px;
+          top: 50%;
+          left: 90%;
+          width: 100%;
+          height: 20px;
+          background-color: $white;
         }
 
         &:hover {
@@ -88,51 +87,6 @@
         }
       }
     }
-
-    .step-2, .step-4 {
-      .counter {
-        b {
-          color: $yellow-green;
-        }
-      }
-
-      .icons {
-        img.arrow {
-          left: 20px;
-        }
-      }
-    }
-
-    .step-2 {
-      .icons {
-        .divider {
-          border-left: 4px dashed $yellow-green;
-        }
-      }
-    }
-
-    .step-3 {
-      .counter {
-        b {
-          color: $yellow-red;
-        }
-      }
-
-      .icons {
-        .divider {
-          border-left: 4px dashed $yellow-red;
-        }
-      }
-    }
-
-    .step-4 {
-      .counter {
-        b {
-          color: $info;
-        }
-      }
-    }
-
   }
 }
 
@@ -151,10 +105,6 @@
           p {
             text-align: center;
           }
-        }
-
-        .divider {
-          display: none;
         }
       }
 
