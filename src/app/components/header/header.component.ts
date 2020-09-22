@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private landingService: LandingService) { }
 
   public ngOnInit(): void {
-    this.menuList = ['Home', 'About', 'Services', 'Strategy', 'Portfolio', 'Reviews', 'Contact Us'];
+    this.menuList = ['Home', 'About', 'Services', 'Strategy', 'Portfolio', 'Contact Us'];
   }
 
   public ngAfterViewInit(): void {

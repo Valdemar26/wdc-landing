@@ -20,11 +20,14 @@
     .contact {
       margin-bottom: 50px;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
 
-      p {
+      a {
         color: $red;
         margin: 10px 0;
         font-weight: bold;
+        text-decoration: none;
       }
     }
 
