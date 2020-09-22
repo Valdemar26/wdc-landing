@@ -1,6 +1,6 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { AfterViewInit, Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
-import { fromEvent, pipe, Subject } from 'rxjs';
+import { fromEvent, Subject } from 'rxjs';
 import { throttleTime, map, pairwise, distinctUntilChanged, share, filter, takeUntil } from 'rxjs/operators';
 
 import { LandingService } from '../../services/landing.service';

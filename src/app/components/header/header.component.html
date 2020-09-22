@@ -1,5 +1,5 @@
-<div class="wdc-wrapper" id="home"> <!-- todo maybe make menu-navbar fixed? -->
-  <img src="./../../../assets/images/logo.png" class="wdc-logo" alt="logo">
+<div class="wdc-wrapper" id="home">
+  <img src="./../../../assets/images/logo.png" class="wdc-logo" alt="logo"> <!-- todo change logo, add hover effect for bird -->
 
   <ul class="wdc-list">
     <li class="wdc-list-item"
@@ -10,8 +10,23 @@
   </ul>
 </div>
 
-<!--
-  todo
-  create burger menu
-  https://codepen.io/erikterwan/pen/EVzeRP
--->
+<nav role="navigation" class="navigation">
+  <div class="menuToggle">
+
+    <input type="checkbox" />
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul class="menu">
+      <a *ngFor="let menu of menuList; let i = index;"
+         [class.active]="activeMenuItem === i"
+         (click)="scrollToSection(menu, i)">
+
+        <li>{{ menu }}</li>
+
+      </a>
+    </ul>
+  </div>
+</nav>

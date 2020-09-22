@@ -100,3 +100,19 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .wdc-slider-wrapper {
+    .wdc-slider-main {
+      .typewriter {
+        h1 {
+          font-size: 20px;
+        }
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+}

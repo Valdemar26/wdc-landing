@@ -28,7 +28,13 @@ app.post('/send-email', function (req, res) {
     </ul>
   `;
 
+   contactInfoSender(output, req);
 
+  // res.writeHead(302, { Location: 'http://localhost:4300' });
+  res.end();
+});
+
+let contactInfoSender = async(output, req) => {
   let transporter = nodeMailer.createTransport({
     host: 'smtp.mailtrap.io',
     port: 2525,
@@ -41,21 +47,23 @@ app.post('/send-email', function (req, res) {
 
   let mailOptions = {
     // should be replaced with real recipient's account
+    form: '"ITPossible"',
     to: 'olehviznyi@gmail.com',
-    subject: req.body.subject,
-    body: req.body.message,
-    html: output // html body
+    // subject: req.body.subject,
+    // body: req.body.message,
+    // html: output // html body
+    subject: "Message title",
+    text: "Plaintext version of the message",
+    html: "<p>HTML version of the message</p>"
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  await transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
   });
-  // res.writeHead(302, { Location: 'http://localhost:4300' });
-  res.end();
-});
+}
 
 let server = app.listen(8081, function(){
   let port = server.address().port;

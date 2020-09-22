@@ -7,10 +7,10 @@
   height: auto;
 
   .container {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    text-align: center;
     color: $white;
-    padding: 100px 0;
+    padding: 100px 50px;
 
     .step-1, .step-2, .step-3, .step-4 {
       display: flex;
@@ -141,6 +141,7 @@
   .wdc-strategy-wrapper {
     .container {
       padding: 20px 0;
+      overflow: hidden;
 
       .step-1, .step-2, .step-3, .step-4 {
         flex-direction: column;
