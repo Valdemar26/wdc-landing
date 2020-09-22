@@ -170,15 +170,20 @@
   .wdc-touch {
     flex-direction: column;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 
     .wdc-details, .wdc-form {
+      text-align: left;
       padding-left: 20px;
       padding-right: 0;
       width: calc(100% - 20px);
     }
 
     .wdc-form {
+      width: 40%;
+      padding: 5px;
+      top: -20px;
+      right: 50px;
 
       .form-group {
         margin: 0 auto;
@@ -186,11 +191,10 @@
     }
 
     .wdc-details {
-      margin-bottom: 30px;
+      padding-left: 10px;
 
       .wdc-social {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
       }
     }
   }
