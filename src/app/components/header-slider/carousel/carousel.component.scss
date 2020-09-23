@@ -19,37 +19,3 @@
   height: 100%;
   object-fit: cover;
 }
-
-/* style the arrows */
-.wdc-slider-controls {
-  position: absolute;
-  width: 50px;
-  height: 100px;
-  display: flex;
-  right: 0;
-  top: calc(50% - 50px);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 10px 0 0 10px;
-
-  span {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin-bottom: 5px;
-
-    &:hover {
-      background-color: $white;
-      cursor: pointer;
-    }
-
-    &.active {
-      background-color: $white;
-    }
-  }
-}

@@ -31,6 +31,8 @@
     .typewriter {
 
       h1 {
+        color: $red;
+        font-size: 36px;
         overflow: hidden;
         border-right: .15em solid $red;
         white-space: nowrap;

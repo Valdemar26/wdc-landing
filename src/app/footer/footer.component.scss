@@ -50,6 +50,17 @@
         }
       }
     }
+  }
 
+  .itp-footer-right {
+    flex-direction: column;
+
+    .copyright {
+      span {
+        font-size: 14px;
+        line-height: 14px;
+        color: $gray;
+      }
+    }
   }
 }
