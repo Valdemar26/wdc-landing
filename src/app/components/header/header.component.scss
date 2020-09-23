@@ -2,7 +2,7 @@
 
 :host {
   position: fixed;
-  top: 0;
+  top: 50px;
   width: 100%;
   z-index: 2;
 }
@@ -12,15 +12,16 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 60px;
   background-color: $dark-background;
 
   .wdc-logo {
     display: block;
     margin-left: 10px;
-    width: 150px;
+    width: 200px;
     height: auto;
     cursor: pointer;
+    margin-top: 25px;
   }
 
   .wdc-list {
@@ -106,7 +107,7 @@
       align-items: flex-end;
       position: relative;
       height: 100%;
-      top: 0px;
+      top: 0;
       right: 10px;
       z-index: 1;
       -webkit-user-select: none;
@@ -114,9 +115,9 @@
 
       .wdc-logo-mobile {
         position: absolute;
-        top: 4px;
+        top: -10px;
         left: 10px;
-        width: 100px;
+        width: 150px;
         height: auto;
       }
 
@@ -149,7 +150,6 @@
 
         &:checked ~ ul {
           transform: none;
-          //transform: translate(0, -100%);
         }
       }
 
