@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private landingService: LandingService) { }
 
   public ngOnInit(): void {
-    this.menuList = ['Home', 'About', 'Services', 'Strategy', 'Portfolio', 'Contact Us'];
+    this.menuList = ['Home', 'About', 'Services', 'Strategy', 'Portfolio', 'Contact Us', 'Blog'];
   }
 
   public ngAfterViewInit(): void {
@@ -80,18 +80,28 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public scrollToSection(item, index): string {
-    this.activeMenuItem = index;
 
-    if (item === 'Contact Us') {
-      this.landingService.smoothScroll('touch');
-      return;
+    if (index === 6) {
+      this.redirectToBlog();
+    } else {
+      this.activeMenuItem = index;
+
+      if (item === 'Contact Us') {
+        this.landingService.smoothScroll('touch');
+        return;
+      }
+
+      this.landingService.smoothScroll(item.toLowerCase());
     }
 
-    this.landingService.smoothScroll(item.toLowerCase());
   }
 
   public ngOnDestroy(): void {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
+  }
+
+  private redirectToBlog(): void {
+    window.open('https://angular-blog-ua.firebaseapp.com/', '_blank');
   }
 }

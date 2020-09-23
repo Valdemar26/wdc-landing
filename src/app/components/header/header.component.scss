@@ -27,6 +27,7 @@
     color: $white;
     list-style-type: none;
     display: flex;
+    align-items: center;
 
     .wdc-list-item {
       margin-right: 30px;
@@ -44,6 +45,20 @@
 
       &:hover {
         color: darken($white, 20%);
+      }
+
+      &:last-child {
+        border: 2px solid $red;
+        border-radius: 10px;
+        padding: 6px 20px;
+        cursor: pointer;
+        transition: 0.3s ease-in;
+
+        &:hover {
+          color: $red;
+          border: 2px solid $white;
+          background-color: $white;
+        }
       }
     }
   }
@@ -84,7 +99,7 @@
     width: 100%;
     background-color: $dark;
 
-    .menuToggle {
+    .menu-toggle {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -96,6 +111,14 @@
       z-index: 1;
       -webkit-user-select: none;
       user-select: none;
+
+      .wdc-logo-mobile {
+        position: absolute;
+        top: 4px;
+        left: 10px;
+        width: 100px;
+        height: auto;
+      }
 
       input {
         display: block;
