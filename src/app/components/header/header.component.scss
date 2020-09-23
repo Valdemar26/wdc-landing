@@ -53,7 +53,6 @@
   .wdc-wrapper {
     .wdc-list {
       overflow: hidden;
-      // todo add 'burger'
     }
   }
 }
@@ -81,12 +80,19 @@
 
   .navigation {
     display: block;
+    height: 50px;
+    width: 100%;
+    background-color: $dark;
 
     .menuToggle {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
       position: relative;
-      top: 30px;
-      left: 30px;
+      height: 100%;
+      top: 0px;
+      right: 10px;
       z-index: 1;
       -webkit-user-select: none;
       user-select: none;
@@ -96,8 +102,8 @@
         width: 40px;
         height: 32px;
         position: absolute;
-        top: -7px;
-        left: -5px;
+        top: 5px;
+        right: -5px;
         cursor: pointer;
         opacity: 0;
         z-index: 2;
@@ -106,7 +112,7 @@
         &:checked ~ span {
           opacity: 1;
           transform: rotate(45deg) translate(-2px, -1px);
-          background: $dark;
+          background: $white;
         }
 
         &:checked ~ span:nth-last-child(3) {
@@ -120,6 +126,7 @@
 
         &:checked ~ ul {
           transform: none;
+          //transform: translate(0, -100%);
         }
       }
 
@@ -148,15 +155,17 @@
 
       .menu {
         position: absolute;
+        top: 150px;
+        right: 0;
         width: 300px;
         margin: -100px 0 0 -50px;
-        padding: 125px 50px 50px 50px;
+        padding: 50px;
         z-index: 1;
         background-color: rgba(255, 255, 255, 0.50);
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0 0;
-        transform: translate(-100%, 0);
+        transform: translate(105%, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
         li {
