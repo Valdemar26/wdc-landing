@@ -20,7 +20,7 @@ import { takeUntil } from 'rxjs/operators';
 import { Observable, Subject } from 'rxjs';
 
 @Component({
-  selector: 'wdc-get-in-touch',
+  selector: 'itp-get-in-touch',
   templateUrl: './get-in-touch.component.html',
   styleUrls: ['./get-in-touch.component.scss']
 })

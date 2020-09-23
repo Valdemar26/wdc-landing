@@ -1,0 +1,55 @@
+@import './../../assets/styles/variables';
+
+.itp-footer-wrapper {
+  background-color: $dark-background;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+
+  .itp-footer-left, .itp-footer-right {
+    flex: 0 0 50%;
+    display: flex;
+  }
+
+  .itp-footer-left {
+    flex-direction: column;
+    color: $white;
+
+    .contact {
+      margin-bottom: 50px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: $red;
+        margin: 10px 0;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+
+    .sitemap {
+      padding: 20px;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          cursor: pointer;
+          transition: 0.3s ease-in;
+          margin: 10px 0;
+          max-width: 100px;
+
+          &:hover {
+            color: $red;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+  }
+}

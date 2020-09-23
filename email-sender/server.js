@@ -36,12 +36,10 @@ app.post('/send-email', function (req, res) {
 
 let contactInfoSender = async(output, req) => {
   let transporter = nodeMailer.createTransport({
-    host: 'smtp.mailtrap.io',
-    port: 2525,
-    secure: false,
+    service: 'gmail',
     auth: {
-      user: '48130a1aaae514',
-      pass: '190265150c8baf'
+      user: 'itpossiblestudio@gmail.com',
+      pass: '671687052itp'
     }
   });
 

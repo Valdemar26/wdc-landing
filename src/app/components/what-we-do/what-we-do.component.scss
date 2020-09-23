@@ -2,33 +2,26 @@
 
 .wdc-do-wrapper {
   display: flex;
+  padding: 20px;
 
   .wdc-left {
-    flex: 0 0 45%;
+    flex: 0 0 40%;
     padding-right: 20px;
 
     img {
-      width: 720px;
-      height: 560px;
+      width: 100%;
+      height: auto;
       margin: 20px auto 0;
     }
   }
 
   .wdc-right {
-    flex: 0 0 40%;
+    flex: 0 0 50%;
 
     h2 {
       font-weight: bold;
       font-size: 30px;
       line-height: 36px;
-      color: $dark;
-      margin: 20px 0;
-    }
-
-    h3 {
-      font-weight: 100;
-      font-size: 30px;
-      line-height: 30px;
       color: $dark;
       margin: 20px 0;
     }
@@ -41,6 +34,22 @@
       font-size: 15px;
       margin-bottom: 30px;
       margin-top: 18px;
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: $red;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+
+      img {
+        margin-left: 20px;
+        width: 20px;
+        height: auto;
+      }
     }
   }
 }

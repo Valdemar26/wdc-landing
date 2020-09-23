@@ -5,7 +5,7 @@ import { DeferLoadDirective } from '../../directives/defer-load.directive';
 
 
 @Component({
-  selector: 'wdc-our-services',
+  selector: 'itp-our-services',
   templateUrl: './our-services.component.html',
   styleUrls: ['./our-services.component.scss']
 })

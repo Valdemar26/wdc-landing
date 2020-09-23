@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'wdc-recent-works',
+  selector: 'itp-recent-works',
   templateUrl: './recent-works.component.html',
   styleUrls: ['./recent-works.component.scss']
 })

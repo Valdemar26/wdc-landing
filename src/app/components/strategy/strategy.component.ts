@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { StrategyListInterface } from '../../interfaces/strategy-list.interface';
 
 @Component({
-  selector: 'wdc-strategy',
+  selector: 'itp-strategy',
   templateUrl: './strategy.component.html',
   styleUrls: ['./strategy.component.scss']
 })

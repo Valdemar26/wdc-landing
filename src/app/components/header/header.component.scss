@@ -18,8 +18,9 @@
   .wdc-logo {
     display: block;
     margin-left: 10px;
-    width: 96px;
-    height: 75px;
+    width: 120px;
+    height: auto;
+    cursor: pointer;
   }
 
   .wdc-list {
@@ -159,7 +160,7 @@
         margin: -100px 0 0 -50px;
         padding: 125px 50px 50px 50px;
         z-index: 1;
-        background-color: rgba(255, 255, 255, 0.15);
+        background-color: rgba(255, 255, 255, 0.50);
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0 0;

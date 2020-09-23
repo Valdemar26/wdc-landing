@@ -18,6 +18,7 @@ import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.comp
 import { CarouselComponent } from './components/header-slider/carousel/carousel.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { DeferLoadDirective } from './directives/defer-load.directive';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DeferLoadDirective } from './directives/defer-load.directive';
     GetInTouchComponent,
     CarouselComponent,
     NotificationComponent,
-    DeferLoadDirective
+    DeferLoadDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

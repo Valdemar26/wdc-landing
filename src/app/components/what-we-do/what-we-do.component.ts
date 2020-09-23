@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { LandingService } from '../../services/landing.service';
 
 @Component({
-  selector: 'wdc-what-we-do',
+  selector: 'itp-what-we-do',
   templateUrl: './what-we-do.component.html',
   styleUrls: ['./what-we-do.component.scss']
 })
