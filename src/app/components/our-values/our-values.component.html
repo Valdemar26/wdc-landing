@@ -1,15 +1,15 @@
-<div class="wdc-slide" id="reviews">
-  <div class="wdc-slide-wrapper">
-    <div class="wdc-slide-content">
-      <div class="wdc-show-slide fade" *ngFor="let slide of slides;">
+<div class="itp-slide" id="reviews">
+  <div class="itp-slide-wrapper">
+    <div class="itp-slide-content">
+      <div class="itp-show-slide fade" *ngFor="let slide of slides;">
         <img [src]="slide.imagePath" alt="slide">
         <p>{{ slide.text }}</p>
       </div>
-      <div class="wdc-carousel-index">
+      <div class="itp-carousel-index">
         <ul>
           <li *ngFor="let control of slides; let i = index;"
               class="dot"
-              [class.wdc-carousel-item]="startIndex - 1 === i"
+              [class.itp-carousel-item]="startIndex - 1 === i"
               (click)="move(i)"> <!-- todo make slide control clickable -->
           </li>
         </ul>

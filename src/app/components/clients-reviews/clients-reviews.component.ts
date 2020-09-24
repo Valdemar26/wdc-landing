@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'wdc-clients-reviews',
+  selector: 'itp-clients-reviews',
   templateUrl: './clients-reviews.component.html',
   styleUrls: ['./clients-reviews.component.scss']
 })

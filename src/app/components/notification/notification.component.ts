@@ -4,7 +4,7 @@ import { NotificationConfigInterface } from '../../interfaces/notification-confi
 import { LandingService } from '../../services/landing.service';
 
 @Component({
-  selector: 'wdc-notification',
+  selector: 'itp-notification',
   templateUrl: './notification.component.html',
   styleUrls: ['./notification.component.scss']
 })

@@ -7,7 +7,7 @@
   z-index: 2;
 }
 
-.wdc-wrapper {
+.itp-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +15,7 @@
   height: 60px;
   background-color: $dark-background;
 
-  .wdc-logo {
+  .itp-logo {
     display: block;
     margin-left: 10px;
     width: 200px;
@@ -24,13 +24,13 @@
     margin-top: 25px;
   }
 
-  .wdc-list {
+  .itp-list {
     color: $white;
     list-style-type: none;
     display: flex;
     align-items: center;
 
-    .wdc-list-item {
+    .itp-list-item {
       margin-right: 30px;
       cursor: pointer;
       transition: color 0.3s ease-in;
@@ -66,8 +66,8 @@
 }
 
 @media (max-width: 1024px) {
-  .wdc-wrapper {
-    .wdc-list {
+  .itp-wrapper {
+    .itp-list {
       overflow: hidden;
     }
   }
@@ -90,7 +90,7 @@
 }
 
 @media (max-width: 1024px) {
-  .wdc-wrapper {
+  .itp-wrapper {
     display: none;
   }
 
@@ -113,7 +113,7 @@
       -webkit-user-select: none;
       user-select: none;
 
-      .wdc-logo-mobile {
+      .itp-logo-mobile {
         position: absolute;
         top: -10px;
         left: 10px;

@@ -1,7 +1,7 @@
 import { AfterViewInit, Directive, ElementRef, EventEmitter, Output } from '@angular/core';
 
 @Directive({
-  selector: '[wdcDeferLoad]'
+  selector: '[itpDeferLoad]'
 })
 export class DeferLoadDirective implements AfterViewInit {
 

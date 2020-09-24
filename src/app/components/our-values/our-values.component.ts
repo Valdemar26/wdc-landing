@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'wdc-our-values',
+  selector: 'itp-our-values',
   templateUrl: './our-values.component.html',
   styleUrls: ['./our-values.component.scss']
 })
@@ -18,7 +18,7 @@ export class OurValuesComponent implements OnInit {
   }
 
   public slide(): void {
-    const slides = Array.from(document.getElementsByClassName('wdc-show-slide'));
+    const slides = Array.from(document.getElementsByClassName('itp-show-slide'));
     if (slides === []) {
       this.repeat();
     }
@@ -66,7 +66,7 @@ export class OurValuesComponent implements OnInit {
   public move(index): void {
     console.log(index);
     let i;
-    const slides = Array.from(document.getElementsByClassName('wdc-show-slide'));
+    const slides = Array.from(document.getElementsByClassName('itp-show-slide'));
     const dots = document.getElementsByClassName('dot');
 
     if (index > slides.length) {
