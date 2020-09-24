@@ -5,7 +5,7 @@ import { fadeIn, fadeOut } from './carousel.animations';
 
 
 @Component({
-  selector: 'wdc-carousel',
+  selector: 'itp-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
   animations: [
