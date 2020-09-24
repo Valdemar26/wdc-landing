@@ -1,6 +1,6 @@
 @import './../../../assets/styles/variables';
 
-.wdc-services-wrapper {
+.itp-services-wrapper {
   background-color: $white-light;
   padding: 100px 0;
 
@@ -73,7 +73,7 @@
 }
 
 @media (max-width: 1024px) {
-  .wdc-services-wrapper {
+  .itp-services-wrapper {
     padding: 20px 0;
 
     .cards-list {

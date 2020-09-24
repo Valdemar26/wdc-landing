@@ -1,6 +1,6 @@
 @import './../../../assets/styles/variables';
 
-.wdc-notification {
+.itp-notification {
   display: flex;
   position: absolute;
   left: 50%;
@@ -30,7 +30,7 @@
     margin: 0 auto;
   }
 
-  .wdc-close {
+  .itp-close {
     position: absolute;
     cursor: pointer;
     top: 5px;
