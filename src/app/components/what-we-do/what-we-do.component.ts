@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { LandingService } from '../../services/landing.service';
 
@@ -9,12 +10,19 @@ import { LandingService } from '../../services/landing.service';
 })
 export class WhatWeDoComponent implements OnInit {
 
-  constructor(private landingService: LandingService) { }
+  constructor(
+    private router: Router,
+    private landingService: LandingService
+  ) { }
 
   public ngOnInit(): void {
   }
 
   public scrollToElement(target: string): void {
     this.landingService.smoothScroll(target);
+  }
+
+  public navigateToAboutUsPage(): void {
+    this.router.navigate(['/about-us']);
   }
 }

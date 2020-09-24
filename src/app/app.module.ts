@@ -18,6 +18,9 @@ import { CarouselComponent } from './components/header-slider/carousel/carousel.
 import { NotificationComponent } from './components/notification/notification.component';
 import { DeferLoadDirective } from './directives/defer-load.directive';
 import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { FooterComponent } from './footer/footer.component';
     CarouselComponent,
     NotificationComponent,
     DeferLoadDirective,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent,
+    PortfolioComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

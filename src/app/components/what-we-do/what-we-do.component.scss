@@ -1,10 +1,10 @@
 @import './../../../assets/styles/variables';
 
-.wdc-do-wrapper {
+.itp-do-wrapper {
   display: flex;
   padding: 20px;
 
-  .wdc-left {
+  .itp-left {
     flex: 0 0 40%;
     padding-right: 20px;
 
@@ -15,7 +15,7 @@
     }
   }
 
-  .wdc-right {
+  .itp-right {
     flex: 0 0 50%;
 
     h2 {
@@ -44,6 +44,7 @@
       font-weight: bold;
       font-size: 18px;
       text-decoration: none;
+      cursor: pointer;
 
       img {
         margin-left: 20px;
@@ -55,16 +56,16 @@
 }
 
 @media (max-width: 1024px) {
-  .wdc-do-wrapper {
+  .itp-do-wrapper {
     flex-direction: column;
 
-    .wdc-left, .wdc-right {
+    .itp-left, .itp-right {
       flex: none;
       padding: 20px;
       width: calc(100% - 40px);
     }
 
-    .wdc-left {
+    .itp-left {
       text-align: center;
 
       img {
@@ -75,7 +76,7 @@
       }
     }
 
-    .wdc-right {
+    .itp-right {
       text-align: center;
 
       h2 {

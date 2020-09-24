@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'wdc-root',
+  selector: 'itp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
