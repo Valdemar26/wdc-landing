@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'itp-recent-works',
@@ -10,7 +11,7 @@ export class RecentWorksComponent implements OnInit {
   buttons = [];
   examples = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public ngOnInit(): void {
     this.initButtons();
@@ -45,4 +46,7 @@ export class RecentWorksComponent implements OnInit {
     ];
   }
 
+  public navigateToPortfolio(): void {
+    this.router.navigate(['/portfolio']);
+  }
 }
