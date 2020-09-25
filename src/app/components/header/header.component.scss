@@ -2,7 +2,7 @@
 
 :host {
   position: fixed;
-  top: 50px;
+  top: 20px;
   width: 100%;
   z-index: 2;
 }
@@ -62,6 +62,14 @@
         }
       }
     }
+  }
+}
+
+
+
+@keyframes pulsing {
+  to {
+    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
   }
 }
 

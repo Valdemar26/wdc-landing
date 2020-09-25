@@ -9,12 +9,15 @@ import {
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { LandingService } from '../../services/landing.service';
 import { NotificationComponent } from '../notification/notification.component';
 import { NotificationConfigInterface } from '../../interfaces/notification-config.interface';
 import {NotificationService} from '../../services/notification.service';
+import {ContactFormService} from '../../services/contact-form.service';
+import { takeUntil } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'itp-get-in-touch',
@@ -31,6 +34,8 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
   scrolled: number;
   pageHeight: number;
 
+  private ngUnsubscribe = new Subject();
+
   @HostListener('window:scroll', ['$event'])
   checkScrolled(): void {
     this.scrolled = window.pageYOffset;
@@ -41,7 +46,9 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
   constructor(
     private landingService: LandingService,
     private resolver: ComponentFactoryResolver,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private contactFormService: ContactFormService,
+    private formBuilder: FormBuilder,
   ) {
     this.initContactForm();
   }
@@ -51,28 +58,35 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
     this.getPageHeight();
   }
 
+  private sendContactFormInfo(form) {
+    return this.contactFormService.sendContactFormInfo(form)
+    .pipe(takeUntil(this.ngUnsubscribe))
+    .subscribe((response) => console.log(response));
+  }
+
   public submit(): void {
     console.log(this.contactForm.value);
+    this.sendContactFormInfo(this.contactForm.value)
     this.contactForm.reset();
 
-    const config: NotificationConfigInterface = {
-      label: 'Message send successfully!',
-      color: 'green',
-      timeout: 4000
-    };
+    // const config: NotificationConfigInterface = {
+    //   label: 'Message send successfully!',
+    //   color: 'green',
+    //   timeout: 4000
+    // };
 
-    const customConfig: NotificationConfigInterface = {
-      label: 'Custom Notification',
-      color: 'red',
-      timeout: 4000
-    };
+    // const customConfig: NotificationConfigInterface = {
+    //   label: 'Custom Notification',
+    //   color: 'red',
+    //   timeout: 4000
+    // };
 
-    this.createDynamicNotification(config);
-    this.notificationService.open(customConfig);
+    // this.createDynamicNotification(config);
+    // this.notificationService.open(customConfig);
 
-    setTimeout(() => {
-      this.destroyNotification();
-    }, config.timeout);
+    // setTimeout(() => {
+    //   this.destroyNotification();
+    // }, config.timeout);
   }
 
   public scrollToTop(): void {
@@ -80,6 +94,8 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
     this.destroyNotification();
   }
 
@@ -95,16 +111,15 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
   }
 
   private initContactForm(): void {
-    this.contactForm = new FormGroup({
-      userName: new FormControl('', Validators.required),
-      userEmail: new FormControl('', [
+    this.contactForm = this.formBuilder.group({
+      userName: [null, Validators.required],
+      userEmail:[null, [
         Validators.required,
         Validators.email
-      ]),
-      userPhone: new FormControl('', Validators.pattern('[0-9]{10}')),
-      message: new FormControl('', Validators.minLength(50))
-    },
-{updateOn: 'blur'});
+      ]],
+      userPhone: [null, Validators.pattern('[0-9]{10}')],
+      message: [null, Validators.minLength(50)]
+    }, {updateOn: 'blur'});
   }
 
   private createDynamicNotification(config?): void {
@@ -117,5 +132,6 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
 
     this.componentRef.instance.output.subscribe((event) => console.log('output event: ', event));
   }
+
 
 }
