@@ -4,6 +4,7 @@ let express = require("express"),
   bodyParser = require('body-parser');
 
 let app = express();
+require("dotenv").config();
 
 app.use(express.static('src'));
 
@@ -18,8 +19,7 @@ app.use(function(req, res, next) {
 
 app.post('/send-email', function (req, res) {
   const output = `
-    <p>You have a new contact request</p>
-    <h3>Contact Details</h3>
+    <h3>Contact Form</h3>
     <ul>
       <li>Імя клієнта: ${req.body.userName}</li>
       <li>Електронна пошта ${req.body.userEmail}</li>
@@ -38,21 +38,18 @@ let contactInfoSender = async(output, req) => {
   let transporter = nodeMailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'itpossiblestudio@gmail.com',
-      pass: '671687052itp'
+      user:  process.env.SMTP_USER,
+      pass:  process.env.SMTP_PASSWORD
     }
   });
 
   let mailOptions = {
     // should be replaced with real recipient's account
     form: '"ITPossible"',
-    to: 'olehviznyi@gmail.com',
-    // subject: req.body.subject,
-    // body: req.body.message,
-    // html: output // html body
+    to: process.env.FROM_TO,
+    html: output,
     subject: "Message title",
     text: "Plaintext version of the message",
-    html: "<p>HTML version of the message</p>"
   };
 
   await transporter.sendMail(mailOptions, (error, info) => {

@@ -1,7 +1,7 @@
 .parallax {
   background-image: url("../assets/images/slider1.jpg");
 
-  height: 500px;
+  height: 700px;
 
   background-attachment: fixed;
   background-position: center;
@@ -9,74 +9,6 @@
   background-size: cover;
 }
 
-.link-to-blog {
-  display: flex;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  height: 50px;
-  top: 50%;
-  right: -60px;
-  text-align: center;
-  white-space: nowrap;
-  padding: 10px;
-  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
-  border-radius: 50%;
-  background-color: #ffafaf;
-  -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  transition: all 300ms ease-in-out;
-  z-index: 2;
-
-    &:hover {
-      right: 5px;
-      animation: none;
-    }
-
-    a {
-      font-size: 22px;
-      font-weight: normal;
-      font-family: sans-serif;
-      text-decoration: none !important;
-      color: #ffffff;
-    }
-}
-
-
-
-/* Comment-out to have the button continue to pulse on mouseover */
-
-a.pulsingButton:hover {
-  -webkit-animation: none;
-  -moz-animation: none;
-  -ms-animation: none;
-  animation: none;
-  color: #ffffff;
-}
-
-
-/* Animation */
-
-@-webkit-keyframes pulsing {
-  to {
-    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
-  }
-}
-
-@-moz-keyframes pulsing {
-  to {
-    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
-  }
-}
-
-@-ms-keyframes pulsing {
-  to {
-    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
-  }
-}
 
 @media only screen and (max-device-width: 1366px) {
   .parallax {

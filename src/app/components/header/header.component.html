@@ -6,12 +6,15 @@
         *ngFor="let menu of menuList; let i = index;"
         [class.active]="activeMenuItem === i"
         (click)="scrollToSection(menu, i)">
-        {{ menu }}</li>
+        {{ menu }}
+      </li>
   </ul>
 </div>
 
 <nav role="navigation" class="navigation">
-  <div class="menuToggle">
+  <div class="menu-toggle">
+
+    <img src="./../../../assets/images/logo.svg" class="wdc-logo-mobile" alt="logo">
 
     <input type="checkbox" />
 

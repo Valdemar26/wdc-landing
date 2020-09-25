@@ -2,7 +2,7 @@
 
 :host {
   position: fixed;
-  top: 0;
+  top: 20px;
   width: 100%;
   z-index: 2;
 }
@@ -12,21 +12,23 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 60px;
   background-color: $dark-background;
 
   .wdc-logo {
     display: block;
     margin-left: 10px;
-    width: 120px;
+    width: 200px;
     height: auto;
     cursor: pointer;
+    margin-top: 25px;
   }
 
   .wdc-list {
     color: $white;
     list-style-type: none;
     display: flex;
+    align-items: center;
 
     .wdc-list-item {
       margin-right: 30px;
@@ -45,6 +47,20 @@
       &:hover {
         color: darken($white, 20%);
       }
+
+      &:last-child {
+        border: 2px solid $red;
+        border-radius: 10px;
+        padding: 6px 20px;
+        cursor: pointer;
+        transition: 0.3s ease-in;
+
+        &:hover {
+          color: $red;
+          border: 2px solid $white;
+          background-color: $white;
+        }
+      }
     }
   }
 }
@@ -61,7 +77,6 @@
   .wdc-wrapper {
     .wdc-list {
       overflow: hidden;
-      // todo add 'burger'
     }
   }
 }
@@ -89,23 +104,38 @@
 
   .navigation {
     display: block;
+    height: 50px;
+    width: 100%;
+    background-color: $dark;
 
-    .menuToggle {
-      display: block;
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
       position: relative;
-      top: 30px;
-      left: 30px;
+      height: 100%;
+      top: 0;
+      right: 10px;
       z-index: 1;
       -webkit-user-select: none;
       user-select: none;
+
+      .wdc-logo-mobile {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        width: 150px;
+        height: auto;
+      }
 
       input {
         display: block;
         width: 40px;
         height: 32px;
         position: absolute;
-        top: -7px;
-        left: -5px;
+        top: 5px;
+        right: -5px;
         cursor: pointer;
         opacity: 0;
         z-index: 2;
@@ -114,7 +144,7 @@
         &:checked ~ span {
           opacity: 1;
           transform: rotate(45deg) translate(-2px, -1px);
-          background: $dark;
+          background: $white;
         }
 
         &:checked ~ span:nth-last-child(3) {
@@ -156,15 +186,17 @@
 
       .menu {
         position: absolute;
+        top: 150px;
+        right: 0;
         width: 300px;
         margin: -100px 0 0 -50px;
-        padding: 125px 50px 50px 50px;
+        padding: 50px;
         z-index: 1;
         background-color: rgba(255, 255, 255, 0.50);
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0 0;
-        transform: translate(-100%, 0);
+        transform: translate(105%, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
         li {

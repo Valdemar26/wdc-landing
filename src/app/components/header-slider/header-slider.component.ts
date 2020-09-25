@@ -27,7 +27,7 @@ export class HeaderSliderComponent implements OnInit {
 
   private initSlides(): void {
     this.slides = [
-      { src: './../../../assets/images/slider1.jpg' },
+      { src: './../../../assets/images/112.jpg' },
       { src: './../../../assets/images/slider2.png' },
       { src: './../../../assets/images/slider3.jpg' }
     ];
