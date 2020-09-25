@@ -1,5 +1,40 @@
-<div class="itc-wrapper">
-  <h2>More About Us</h2>
+<div class="itp-about-menu-wrapper">
+  <div class="menu-wrapper">
+    <img src="./../../../assets/images/logo.svg" class="itp-logo" alt="logo">
+
+    <ul class="itp-list">
+      <li class="itp-list-item"
+          (click)="backToHome()">
+        Home
+      </li>
+    </ul>
+  </div>
+
+  <nav role="navigation" class="navigation">
+    <div class="menu-toggle">
+
+      <img src="./../../../assets/images/logo.svg" class="itp-logo-mobile" alt="logo">
+
+      <input type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul class="menu">
+        <a (click)="backToHome()">
+
+          <li>Home</li>
+
+        </a>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<div class="itp-wrapper">
+  <h2>About Us</h2>
 
   <h3>We are focused on Angular technology that fits all our customer's needs.</h3>
   <h3>The main goal of our team is that each of our clients will be completely satisfied with our work.</h3>
@@ -7,7 +42,7 @@
   <div class="itc-units">
     <div class="itc-frontend">
       <h3 class="part">Frontend part</h3>
-      <img src="https://maximum.fm/radio24/resources/photos/news/201604/48805.jpg" alt="frontend">
+
       <p>
         We are goal-orientated frontend developer with 2+ years of experience in developing customer-facing websites.
         Passionate about design and implementation of mobile and web user interfaces providing effective user
@@ -62,9 +97,8 @@
 
     <div class="itc-design">
       <h3 class="part">Desing part</h3>
-      <img src="https://hungarytoday.hu/wp-content/uploads/2018/02/18ps27.jpg" alt="desing">
 
-      <h4 class="name">Hello, my name is Vladislav!</h4>
+      <h4 class="motto">"Design should show, not tell"</h4>
 
       <p>At work, I am primarily interested in quality design based on customer wishes and current trends in a
         timely manner. In addition, I try to make the design of both UI and UX so that it is convenient
@@ -108,10 +142,9 @@
         <li>Adobe Photoshop</li>
       </ul>
 
-      <h4 class="motto">"Design should show, not tell"</h4>
-
     </div>
   </div>
 
-
 </div>
+
+<itp-footer></itp-footer>
