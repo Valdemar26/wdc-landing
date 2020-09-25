@@ -1,6 +1,6 @@
 @import './../../../assets/styles/variables';
 
-.wdc-touch {
+.itp-touch {
   background-color: lighten($white-light, 10%);
   padding: 150px 10px 100px 100px;
   display: flex;
@@ -9,13 +9,13 @@
   height: auto;
   margin-bottom: 100px;
 
-  .wdc-details, .wdc-form {
+  .itp-details, .itp-form {
     flex: 0 0 48%;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .wdc-details {
+  .itp-details {
     flex: 0 0 100%;
     border: 2px solid $dark;
     border-radius: 5px;
@@ -48,12 +48,12 @@
       color: $dark;
     }
 
-    .wdc-social {
+    .itp-social {
       display: flex;
       flex-direction: column;
       margin-top: 20px;
 
-      .wdc-email, .wdc-skype {
+      .itp-email, .itp-skype {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
@@ -72,7 +72,7 @@
     }
   }
 
-  .wdc-form {
+  .itp-form {
     position: absolute;
     top: 50px;
     right: 100px;
@@ -136,7 +136,7 @@
     }
   }
 
-  .wdc-go-to-top {
+  .itp-go-to-top {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,19 +167,19 @@
 }
 
 @media (max-width: 1024px) {
-  .wdc-touch {
+  .itp-touch {
     flex-direction: column;
     text-align: center;
     padding: 20px;
 
-    .wdc-details, .wdc-form {
+    .itp-details, .itp-form {
       text-align: left;
       padding-left: 20px;
       padding-right: 0;
       width: calc(100% - 20px);
     }
 
-    .wdc-form {
+    .itp-form {
       width: 40%;
       padding: 5px;
       top: -20px;
@@ -190,10 +190,10 @@
       }
     }
 
-    .wdc-details {
+    .itp-details {
       padding-left: 10px;
 
-      .wdc-social {
+      .itp-social {
         flex-direction: column;
       }
     }
@@ -201,15 +201,15 @@
 }
 
 @media (max-width: 768px) {
-  .wdc-touch {
-    .wdc-details, .wdc-form {
+  .itp-touch {
+    .itp-details, .itp-form {
       padding-left: 0;
 
       form {
         padding-left: 10px;
       }
 
-      .wdc-social {
+      .itp-social {
         flex-direction: column;
         align-items: center;
       }

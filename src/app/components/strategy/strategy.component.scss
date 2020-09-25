@@ -1,6 +1,6 @@
 @import './../../../assets/styles/variables';
 
-.wdc-strategy-wrapper {
+.itp-strategy-wrapper {
   background-image: url("./../../../assets/images/bg1.jpg");
   display: flex;
   width: 100%;
@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     .step-1, .step-2, .step-3, .step-4 {
       display: flex;
@@ -60,15 +61,6 @@
           }
         }
 
-        .divider {
-          position: absolute;
-          top: 50%;
-          left: 90%;
-          width: 100%;
-          height: 20px;
-          background-color: $white;
-        }
-
         &:hover {
           img.image-step {
             border: 5px solid $white;
@@ -87,12 +79,22 @@
         }
       }
     }
+
+    .divider {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background-color: $white;
+    }
+
   }
 }
 
 
 @media (max-width: 1024px) {
-  .wdc-strategy-wrapper {
+  .itp-strategy-wrapper {
     .container {
       padding: 20px 0;
       overflow: hidden;

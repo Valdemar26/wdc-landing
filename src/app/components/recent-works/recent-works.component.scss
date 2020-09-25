@@ -1,6 +1,6 @@
 @import './../../../assets/styles/variables';
 
-.wdc-recent-wrapper {
+.itp-recent-wrapper {
   display: flex;
   flex-direction: column;
   background-color: $white-light;
@@ -19,7 +19,7 @@
     text-align: center;
   }
 
-  .wdc-buttons-wrapper {
+  .itp-buttons-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@
   .works-wrapper {
     display: flex;
 
-    .wdc-example {
+    .itp-example {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -79,15 +79,34 @@
       }
     }
   }
+
+  .more-wrapper {
+    a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: #fa6262;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+
+      img {
+        margin-left: 20px;
+        width: 20px;
+        height: auto;
+      }
+    }
+  }
 }
 
 @media (max-width: 1024px) {
-  .wdc-recent-wrapper {
+  .itp-recent-wrapper {
     padding: 20px 0;
     .works-wrapper {
       flex-direction: column;
 
-      .wdc-example {
+      .itp-example {
         margin-bottom: 20px;
       }
     }

@@ -1,8 +1,8 @@
-<div class="wdc-wrapper" id="home">
-  <img src="./../../../assets/images/logo.svg" class="wdc-logo" alt="logo">
+<div class="itp-wrapper" id="home">
+  <img src="./../../../assets/images/logo.svg" class="itp-logo" alt="logo">
 
-  <ul class="wdc-list">
-    <li class="wdc-list-item"
+  <ul class="itp-list">
+    <li class="itp-list-item"
         *ngFor="let menu of menuList; let i = index;"
         [class.active]="activeMenuItem === i"
         (click)="scrollToSection(menu, i)">
@@ -14,7 +14,7 @@
 <nav role="navigation" class="navigation">
   <div class="menu-toggle">
 
-    <img src="./../../../assets/images/logo.svg" class="wdc-logo-mobile" alt="logo">
+    <img src="./../../../assets/images/logo.svg" class="itp-logo-mobile" alt="logo">
 
     <input type="checkbox" />
 

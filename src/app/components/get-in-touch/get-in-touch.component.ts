@@ -100,7 +100,9 @@ export class GetInTouchComponent implements OnInit, OnDestroy {
   }
 
   private destroyNotification(): void {
-    this.componentRef.destroy();
+    if (this.componentRef) {
+      this.componentRef.destroy();
+    }
   }
 
   private getPageHeight(): void {
