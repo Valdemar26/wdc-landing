@@ -45,6 +45,11 @@
       font-size: 18px;
       text-decoration: none;
       cursor: pointer;
+      transition: 0.3s ease-in;
+
+      &:hover {
+        color: darken($red, 20%);
+      }
 
       img {
         margin-left: 20px;
