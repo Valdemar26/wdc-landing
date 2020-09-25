@@ -5,9 +5,10 @@
     <li class="itp-list-item"
         *ngFor="let menu of menuList; let i = index;"
         [class.active]="activeMenuItem === i"
-        (click)="scrollToSection(menu, i)">{{ menu }}</li>
+        (click)="scrollToSection(menu, i)">
+        {{ menu }}
+      </li>
   </ul>
-
 </div>
 
 <nav role="navigation" class="navigation">
