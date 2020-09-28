@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'itp-portfolio',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
+
+  public backToHome(): void {  // todo move to service
+    this.router.navigate(['/main']);
   }
 
 }
