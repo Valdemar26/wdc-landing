@@ -1,8 +1,11 @@
-import {AfterViewInit, Component, HostBinding, OnDestroy, OnInit} from '@angular/core';
+import { AfterViewInit, Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {fromEvent, Subject} from 'rxjs';
-import {distinctUntilChanged, filter, map, pairwise, share, takeUntil, throttleTime} from 'rxjs/operators';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+
+import { fromEvent, Subject } from 'rxjs';
+import { distinctUntilChanged, filter, map, pairwise, share, takeUntil, throttleTime } from 'rxjs/operators';
+
 
 enum VisibilityState {
   Visible = 'visible',
@@ -43,7 +46,18 @@ export class AboutUsComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.isVisible ? VisibilityState.Visible : VisibilityState.Hidden;
   }
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private title: Title,
+    private meta: Meta
+  ) {
+    title.setTitle('ITPossible Angular Team | About Us');
+
+    meta.addTags([
+      { name: 'keywords', content: 'angular, web, studio, it-ukraine, it company, Angular 8, Angular 9'},
+      { name: 'description', content: '★ITPossible web studio - Web Development Angular Team | About Us★'}
+    ]);
+  }
 
   public ngOnInit(): void {
     window.scrollTo(0, 0);
