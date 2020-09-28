@@ -1,104 +1,137 @@
 @import './../../../assets/styles/variables';
 
-.itp-recent-wrapper {
-  display: flex;
-  flex-direction: column;
+.itp-recent {
+  width: auto;
+  padding: 150px 30px;
   background-color: $white-light;
-  padding: 100px 0;
 
-  h2 {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  p {
-    margin: 20px auto 50px;
-    font-size: 13px;
-    line-height: 21px;
-    text-align: center;
-  }
-
-  .itp-buttons-wrapper {
+  .itp-recent-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
 
-    .button {
-      border-radius: 5px;
-      box-shadow: $box-shadow-light;
-      color: $white;
-      cursor: pointer;
-      background-color: $gray;
-      border: 1px solid transparent;
-      outline: none;
-      padding: 10px 24px;
-      margin-right: 10px;
-
-      &.active {
-        background-color: $red;
-        box-shadow: $box-shadow-red;
-      }
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
     }
-  }
 
-  .works-wrapper {
-    display: flex;
+    p {
+      margin: 20px auto 50px;
+      font-size: 13px;
+      line-height: 21px;
+      text-align: center;
+    }
 
-    .itp-example {
+    .itp-buttons-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex: 0 0 28%;
-      margin: 0 1%;
-      position: relative;
+      margin-bottom: 20px;
 
-      img {
-        width: 300px;
-        height: 300px;
+      .button {
+        border-radius: 5px;
+        box-shadow: $box-shadow-light;
+        color: $white;
+        cursor: pointer;
+        background-color: $gray;
+        border: 1px solid transparent;
+        outline: none;
+        padding: 10px 24px;
+        margin-right: 10px;
+        transition: background-color 0.3s ease-in;
 
         &:hover {
-          opacity: 0.7;
-          cursor: pointer;
+          background-color: darken($gray, 10%);
+        }
+
+        &.active {
+          background-color: $red;
+          box-shadow: $box-shadow-red;
         }
       }
+    }
 
-      p, h5 {
-        position: absolute;
-        color: $dark;
-        top: 40%;
-        margin: 0 auto;
-        font-size: 24px;
-        font-weight: bold;
-      }
+    .works-wrapper {
+      display: flex;
+      justify-content: space-between;
 
-      h5 {
-        top: 50%;
-        font-size: 16px;
+      .itp-example {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 28%;
+        margin: 0 1%;
+        position: relative;
+
+        img {
+          width: 300px;
+          height: 300px;
+
+          &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+          }
+        }
+
+        p, h5 {
+          position: absolute;
+          color: $dark;
+          top: 40%;
+          margin: 0 auto;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        h5 {
+          top: 50%;
+          font-size: 16px;
+        }
       }
     }
-  }
 
-  .more-wrapper {
-    a {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      color: #fa6262;
-      font-weight: bold;
-      font-size: 18px;
-      text-decoration: none;
-      cursor: pointer;
+    .more-wrapper {
+      a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $red;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+        margin-top: 50px;
+        position: relative;
 
-      img {
-        margin-left: 20px;
-        width: 20px;
-        height: auto;
+        &::before {
+          width: 0;
+          position: absolute;
+          right: 35px;
+          content: '';
+          height: 2px;
+          display: block;
+          background: $red;
+          bottom: 0px;
+          transition: 300ms;
+        }
+
+        &:hover::before {
+          width: 145px;
+          color: darken($red, 20%);
+        }
+
+        img {
+          margin-left: 20px;
+          width: 20px;
+          height: auto;
+        }
       }
     }
   }
 }
+
+
 
 @media (max-width: 1024px) {
   .itp-recent-wrapper {
