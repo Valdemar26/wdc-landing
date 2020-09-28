@@ -99,4 +99,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
     this.ngUnsubscribe.complete();
   }
 
+  public openPortfolioExample(url): void {
+    window.open(url, '_blank');
+  }
 }
