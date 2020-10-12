@@ -26,6 +26,17 @@
       margin-bottom: 100px;
       box-shadow: $box-shadow;
 
+      &.clickable {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+
+      img {
+        max-width: 900px;
+        width: auto;
+        height: auto;
+      }
+
       .itp-portfolio-item-title {
         width: 100%;
         position: absolute;
@@ -223,6 +234,18 @@
             cursor: pointer;
             color: $red;
           }
+        }
+      }
+    }
+  }
+
+  .itp-portfolio {
+    .itp-portfolio-wrapper {
+      .itp-portfolio-item {
+        img {
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
         }
       }
     }
