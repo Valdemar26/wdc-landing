@@ -29,7 +29,12 @@
       &.clickable {
         cursor: pointer;
         opacity: 0.9;
-        box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+      }
+
+      img {
+        max-width: 900px;
+        width: auto;
+        height: auto;
       }
 
       .itp-portfolio-item-title {
@@ -229,6 +234,18 @@
             cursor: pointer;
             color: $red;
           }
+        }
+      }
+    }
+  }
+
+  .itp-portfolio {
+    .itp-portfolio-wrapper {
+      .itp-portfolio-item {
+        img {
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
         }
       }
     }
