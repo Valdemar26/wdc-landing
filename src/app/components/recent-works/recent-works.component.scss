@@ -140,7 +140,13 @@
       flex-direction: column;
 
       .itp-example {
-        margin-bottom: 20px;
+        width: 90%;
+        margin: 20px auto;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
