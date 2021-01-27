@@ -3,7 +3,8 @@
 .itp-recent {
   width: auto;
   padding: 150px 30px;
-  background-color: $white-light;
+  //background-color: $white-light;
+  background: url("./../../../assets/images/recent-works.jpg");
 
   .itp-recent-wrapper {
     display: flex;
@@ -62,32 +63,8 @@
         justify-content: center;
         align-items: center;
         flex: 0 0 28%;
-        margin: 0 1%;
+        margin: 1% 1%;
         position: relative;
-
-        img {
-          width: 300px;
-          height: 300px;
-
-          &:hover {
-            opacity: 0.7;
-            cursor: pointer;
-          }
-        }
-
-        p, h5 {
-          position: absolute;
-          color: $dark;
-          top: 40%;
-          margin: 0 auto;
-          font-size: 24px;
-          font-weight: bold;
-        }
-
-        h5 {
-          top: 50%;
-          font-size: 16px;
-        }
       }
     }
 
@@ -129,6 +106,77 @@
       }
     }
   }
+}
+
+/*
+  flip
+*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+
+  img {
+    width: 300px;
+    height: 300px;
+  }
+
+  h2, h5 {
+    position: absolute;
+    color: $dark;
+    top: 30%;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  h2 {
+    margin: 20px auto 50px;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  h5 {
+    top: 50%;
+    font-size: 16px;
+  }
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  align-items: center;
 }
 
 

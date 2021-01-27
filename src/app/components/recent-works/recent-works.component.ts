@@ -30,7 +30,7 @@ export class RecentWorksComponent implements OnInit {
     this.examples = [
       {
         imagePath: './../../../assets/images/project1.jpg',
-        title: 'Project 1',
+        title: 'Films Catalog',
         description: 'Description for project 1'
       },
       {
