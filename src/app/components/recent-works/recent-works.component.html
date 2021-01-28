@@ -13,14 +13,14 @@
 
     <div class="works-wrapper">
 
-      <div class="flip-card" *ngFor="let example of examples">
+      <div class="flip-card"
+           *ngFor="let example of examples" [ngClass]="example.type === '1' ? 'card-web' : 'card-design'">
 
-        <div class="flip-card-inner">
+        <div class="flip-card-inner" *ngIf="activeButton === +example.type || activeButton === 0">
 
           <div class="flip-card-front">
             <img [src]="example.imagePath" alt="example">
             <h2>{{ example.title }}</h2>
-
           </div>
 
           <div class="flip-card-back">
