@@ -10,7 +10,7 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   public ngOnInit(): void {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }
 
 }

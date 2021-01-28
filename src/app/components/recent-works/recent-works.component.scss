@@ -3,7 +3,6 @@
 .itp-recent {
   width: auto;
   padding: 150px 30px;
-  //background-color: $white-light;
   background: url("./../../../assets/images/recent-works.jpg");
 
   .itp-recent-wrapper {
@@ -57,18 +56,11 @@
     .works-wrapper {
       display: flex;
       justify-content: space-between;
-
-      .itp-example {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 0 0 28%;
-        margin: 1% 1%;
-        position: relative;
-      }
+      flex-wrap: wrap;
     }
 
     .more-wrapper {
+
       a {
         display: flex;
         justify-content: flex-end;
@@ -89,7 +81,7 @@
           height: 2px;
           display: block;
           background: $red;
-          bottom: 0px;
+          bottom: 0;
           transition: 300ms;
         }
 
@@ -116,6 +108,24 @@
   width: 300px;
   height: 300px;
   perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 28%;
+  margin: 1% 1%;
+  position: relative;
+
+  &.card-web {
+    .flip-card-back {
+      background-color: $red;
+    }
+  }
+
+  &.card-design {
+    .flip-card-back {
+      background-color: #f3af3f;
+    }
+  }
 }
 
 .flip-card-inner {
@@ -130,6 +140,7 @@
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .flip-card-front, .flip-card-back {
@@ -143,7 +154,7 @@
 }
 
 .flip-card-front {
-  color: black;
+  color: $red;
 
   img {
     width: 300px;
@@ -164,31 +175,38 @@
     font-size: 20px;
     line-height: 21px;
     text-align: center;
+    color: $red;
+    width: 90%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.75);
   }
 
   h5 {
     top: 50%;
-    font-size: 16px;
   }
 }
 
 .flip-card-back {
-  background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
   align-items: center;
+
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
-
-
 
 @media (max-width: 1024px) {
   .itp-recent-wrapper {
     padding: 20px 0;
+
     .works-wrapper {
       flex-direction: column;
+      align-items: center;
 
-      .itp-example {
-        width: 90%;
+      .flip-card {
+        width: 80%;
         margin: 20px auto;
 
         img {
