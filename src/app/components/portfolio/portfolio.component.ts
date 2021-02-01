@@ -37,6 +37,8 @@ enum Direction {
 })
 export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
 
+  public examples = [];
+
   private ngUnsubscribe = new Subject();
   private isVisible = true;
 
@@ -60,6 +62,8 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public ngOnInit(): void {
     window.scrollTo(0, 0);
+    this.initExamples();
+
   }
 
   public backToHome(): void {  // todo move to service
@@ -101,5 +105,46 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public openPortfolioExample(url): void {
     window.open(url, '_blank');
+  }
+
+  private initExamples(): void {
+    this.examples = [
+      {
+        imagePath: './../../../assets/images/films.png',
+        title: 'Films Catalog',
+        description: `Project on Angular10, using 'themoviedb api' for data. With possibility to sort, add to favorite or remove films. Data communications on RxJS streams.`,
+        type: '1'
+      },
+      {
+        imagePath: './../../../assets/images/portfolio_1.png',
+        title: 'AVA Mountain',
+        description: 'Branding for a travel agency.',
+        type: '2'
+      },
+      {
+        imagePath: './../../../assets/images/building_landing.png',
+        title: 'Cottages',
+        description: 'Landing page for RealEstate company. Flexible degign using flexbox. Split on Angular 8 component to make landing faster.',
+        type: '1'
+      },
+      {
+        imagePath: './../../../assets/images/portfolio_2.png',
+        title: 'Aqua Lab',
+        description: 'Design for a aqua laboratory. Include creating landing page.',
+        type: '2'
+      },
+      {
+        imagePath: './../../../assets/images/startup.png',
+        title: 'Startup Finder',
+        description: 'Website to find and present Startups on conference.',
+        type: '1'
+      },
+      {
+        imagePath: './../../../assets/images/scores-pro.png',
+        title: 'Scores Pro',
+        description: 'Sport events live-scores website',
+        type: '1'
+      },
+    ];
   }
 }
