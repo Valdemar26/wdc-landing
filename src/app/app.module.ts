@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { MainComponent } from './components/main/main.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { MainComponent } from './components/main/main.component';
     FooterComponent,
     AboutUsComponent,
     PortfolioComponent,
-    MainComponent
+    MainComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
