@@ -111,40 +111,46 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
     this.examples = [
       {
         imagePath: './../../../assets/images/films.png',
-        title: 'Films Catalog',
+        title: 'Films',
+        subtitle: 'Catalog',
         description: `Project on Angular10, using 'themoviedb api' for data. With possibility to sort, add to favorite or remove films. Data communications on RxJS streams.`,
         type: '1'
       },
       {
         imagePath: './../../../assets/images/portfolio_1.png',
-        title: 'AVA Mountain',
+        title: 'AVA',
+        subtitle: 'Mountain',
         description: 'Branding for a travel agency.',
         type: '2'
       },
       {
         imagePath: './../../../assets/images/building_landing.png',
         title: 'Cottages',
+        subtitle: 'Landing',
         description: 'Landing page for RealEstate company. Flexible degign using flexbox. Split on Angular 8 component to make landing faster.',
         type: '1'
       },
       {
         imagePath: './../../../assets/images/portfolio_2.png',
-        title: 'Aqua Lab',
+        title: 'Aqua',
+        subtitle: 'Lab',
         description: 'Design for a aqua laboratory. Include creating landing page.',
         type: '2'
       },
       {
         imagePath: './../../../assets/images/startup.png',
-        title: 'Startup Finder',
+        title: 'Startup',
+        subtitle: 'Finder',
         description: 'Website to find and present Startups on conference.',
         type: '1'
       },
       {
         imagePath: './../../../assets/images/scores-pro.png',
-        title: 'Scores Pro',
+        title: 'Scores',
+        subtitle: 'Pro',
         description: 'Sport events live-scores website',
         type: '1'
-      },
+      }
     ];
   }
 }

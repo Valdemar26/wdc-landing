@@ -121,7 +121,7 @@
     menu
  */
 
-.itp-about-menu-wrapper {
+.itp-menu-wrapper {
   position: fixed;
   top: 20px;
   width: 100%;
@@ -170,7 +170,7 @@
 
 @media (max-width: 1024px) {
 
-  .itp-about-menu-wrapper {
+  .itp-menu-wrapper {
 
     .menu-wrapper {
       display: none;
