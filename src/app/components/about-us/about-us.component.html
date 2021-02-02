@@ -1,39 +1,4 @@
-<div class="itp-menu-wrapper">
-
-  <!-- TODO move to new 'menu' component from here -->
-  <div class="menu-wrapper">
-    <img src="./../../../assets/images/logo.svg" class="itp-logo" alt="logo">
-
-    <ul class="itp-list">
-      <li class="itp-list-item"
-          (click)="backToHome()">
-        Home
-      </li>
-    </ul>
-  </div>
-
-  <nav role="navigation" class="navigation">
-    <div class="menu-toggle">
-
-      <img src="./../../../assets/images/logo.svg" class="itp-logo-mobile" alt="logo">
-
-      <input type="checkbox" />
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-      <ul class="menu">
-        <a (click)="backToHome()">
-
-          <li>Home</li>
-
-        </a>
-      </ul>
-    </div>
-  </nav>
-</div>
-<!-- TODO move to new 'menu' component    - to here -->
+<itp-menu></itp-menu>
 
 <div class="itp-about">
 

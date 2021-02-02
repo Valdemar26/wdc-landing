@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 import { fromEvent, Subject } from 'rxjs';
@@ -47,7 +46,6 @@ export class AboutUsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   constructor(
-    private router: Router,
     private title: Title,
     private meta: Meta
   ) {
@@ -89,10 +87,6 @@ export class AboutUsComponent implements OnInit, AfterViewInit, OnDestroy {
     goingDown$
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(() => (this.isVisible = false));
-  }
-
-  public backToHome(): void {
-    this.router.navigate(['/main']);
   }
 
   public ngOnDestroy(): void {

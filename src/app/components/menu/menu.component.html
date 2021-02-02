@@ -1,0 +1,35 @@
+<div class="itp-menu-wrapper">
+
+  <div class="menu-wrapper">
+    <img src="./../../../assets/images/logo.svg" class="itp-logo" alt="logo">
+
+    <ul class="itp-list">
+      <li class="itp-list-item"
+          (click)="backToHome()">
+        Home
+      </li>
+    </ul>
+  </div>
+
+  <nav role="navigation" class="navigation">
+    <div class="menu-toggle">
+
+      <img src="./../../../assets/images/logo.svg" class="itp-logo-mobile" alt="logo">
+
+      <input type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul class="menu">
+        <a (click)="backToHome()">
+
+          <li>Home</li>
+
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+</div>

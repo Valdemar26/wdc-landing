@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Meta, Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 
 import { fromEvent, Subject } from 'rxjs';
 import { distinctUntilChanged, filter, map, pairwise, share, takeUntil, throttleTime } from 'rxjs/operators';
@@ -48,7 +47,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   constructor(
-    private router: Router,
     private title: Title,
     private meta: Meta
   ) {
@@ -64,10 +62,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
     window.scrollTo(0, 0);
     this.initExamples();
 
-  }
-
-  public backToHome(): void {  // todo move to service
-    this.router.navigate(['/main']);
   }
 
   public ngAfterViewInit(): void {
