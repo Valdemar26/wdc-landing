@@ -9,161 +9,18 @@
 
   h2 {
     text-align: left;
-    font-size: 50px;
+    font-size: 40px;
     color: $red;
     margin-bottom: 50px;
     font-weight: bold;
   }
-
-  .itp-portfolio-wrapper {
-
-    // BASIC
-
-    ul {
-      list-style-type: none;
-      padding: 40px 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
-      grid-gap: 40px;
-    }
-
-    li {
-      flex: 1 1 calc((100% / 2) - 2rem);
-      flex-grow: 1;
-      border: 2px dotted red;
-      background: rgba(68,68,68,0.5);
-      position: relative;
-
-      img {
-        max-width: 380px;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        filter: blur(5px) grayscale(0.75);
-        transition: 0.3s ease-in;
-
-        &:hover {
-          filter: none;
-        }
-      }
-
-      .itp-portfolio-item-title {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-
-        h3 {
-          color: $red;
-          font-size: 30px;
-          margin-bottom: 10px;
-        }
-
-        h4 {
-          color: $white;
-          font-size: 20px;
-        }
-      }
-    }
-
-    li:last-child {
-      // There's no science in using "10" here. In all my testing, this delivered the best results.
-      flex-grow: 10;
-    }
-
-    img {
-      //max-height: 100%;
-      //min-width: 100%;
-      //object-fit: cover;
-      //vertical-align: bottom;
-    }
-
-    // ADVANCED
-
-    // Portrait
-
-    @media (max-aspect-ratio: 1/1) {
-      li {
-        height: 30vh;
-      }
-    }
-
-    // Short screens
-
-    @media (max-height: 480px) {
-      li {
-        height: 80vh;
-      }
-    }
-
-    // Smaller screens in portrait
-
-    @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
-      ul {
-        flex-direction: row;
-      }
-
-      li {
-        height: auto;
-        width: 100%;
-      }
-      img {
-        //width: 100%;
-        //max-height: 75vh;
-        //min-width: 0;
-      }
-    }
-
-
-    .itp-portfolio-item {
-      //width: 100%;
-      //height: auto;
-      //display: flex;
-      //position: relative;
-      //margin-bottom: 100px;
-      //box-shadow: $box-shadow;
-
-      &.clickable {
-        cursor: pointer;
-        opacity: 0.9;
-      }
-
-      img {
-        //max-width: 900px;
-        //width: auto;
-        //height: auto;
-      }
-
-      //.itp-portfolio-item-title {
-      //  width: 100%;
-      //  position: absolute;
-      //  bottom: 0;
-      //  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 99.26%);
-      //  padding: 30px 0 30px 30px;
-      //
-      //  h3 {
-      //    color: $red;
-      //    font-size: 40px;
-      //    margin-bottom: 10px;
-      //  }
-      //
-      //  h4 {
-      //    color: $white;
-      //    font-size: 32px;
-      //  }
-      //}
-    }
-  }
 }
 
+/* TODO move styles from 'portfolio' and 'about' in main 'styles.scss' */
 
+/* menu */
 
-/* todo move styles from 'portfolio' and 'about' in main 'styles.scss' */
-
-/*
-    menu
- */
-
-.itp-portfolio-menu-wrapper {
+.itp-menu-wrapper {
   position: fixed;
   top: 20px;
   width: 100%;
@@ -212,7 +69,7 @@
 
 @media (max-width: 1024px) {
 
-  .itp-portfolio-menu-wrapper {
+  .itp-menu-wrapper {
 
     .menu-wrapper {
       display: none;
@@ -334,16 +191,181 @@
       }
     }
   }
+}
 
-  .itp-portfolio {
-    .itp-portfolio-wrapper {
-      .itp-portfolio-item {
-        img {
-          //width: 80%;
-          //height: auto;
-          //margin: 0 auto;
-        }
-      }
-    }
+/* style to make all images with different width and height the same via css-code */
+
+img {
+  width: 30vw;
+  height: 30vw;
+  object-fit: cover;
+}
+
+.itp-portfolio-wrapper-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  list-style: none;
+  text-align: center;
+}
+
+.itp-portfolio-item {
+  margin: 1em;
+  text-align: center;
+}
+
+/**
+  effect 'Milo' styles
+ */
+.grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  //background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure h2 {
+  color: $white;
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Milo *****/
+/*---------------*/
+
+figure.effect-milo {
+  &:hover {
+    background: #1f3130;
   }
 }
+
+figure.effect-milo img {
+  max-width: none;
+  width: -webkit-calc(100% + 60px);
+  width: calc(100% + 60px);
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-30px,0,0) scale(1.12);
+  transform: translate3d(-30px,0,0) scale(1.12);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-milo:hover img {
+  opacity: 0.2;
+  -webkit-transform: translate3d(0,0,0) scale(1);
+  transform: translate3d(0,0,0) scale(1);
+}
+
+figure.effect-milo h2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em 1.2em;
+}
+
+figure.effect-milo p {
+  padding: 0 10px 0 0;
+  width: 50%;
+  border-right: 1px solid #fff;
+  text-align: right;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-40px,0,0);
+  transform: translate3d(-40px,0,0);
+}
+
+figure.effect-milo:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+
+@media screen and (max-width: 50em) {
+  .content {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .grid figure {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
