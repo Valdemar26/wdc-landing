@@ -88,19 +88,17 @@
       height: 20px;
       background-color: $white;
     }
-
   }
-}
 
+  @media (max-width: 768px) {
 
-@media (max-width: 1024px) {
-  .itp-strategy-wrapper {
     .container {
       padding: 20px 0;
       overflow: hidden;
+      flex-direction: column;
 
       .step-1, .step-2, .step-3, .step-4 {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-bottom: 50px;
 
         .text {
@@ -110,8 +108,8 @@
         }
       }
 
-      .step-2, .step-4 {
-        flex-direction: column-reverse;
+      .divider {
+        display: none;
       }
     }
   }
